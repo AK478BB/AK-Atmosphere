@@ -1,52 +1,21 @@
+AK原版大气层个人整合包更新须知
 
-![Banner](img/banner.png?raw=true)
-=====
+https://pan.baidu.com/s/1t7kvfTKvSZAOMgR6yZM3hA提取码avmd
 
-![License](https://img.shields.io/badge/License-GPLv2-blue.svg)
-[![Chat on Discord](https://camo.githubusercontent.com/b4175720ede4f2621aa066ffbabb70ae30044679/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d446973636f72642d627269676874677265656e2e737667)](https://discordapp.com/invite/ZdqEhed)
+（1）如一直用AK原版大气层个人整合包的，只要未特别说明，可以覆盖，也可以删除旧的atmosphere/contents后就覆盖新的整合包。
 
-Atmosphère is a work-in-progress customized firmware for the Nintendo Switch.
+如原来别人的整合包上覆盖出现问题，请删除atmosphere和bootloader后再解压缩包覆盖。最稳的，请保留nintendo和emummc后删除其它，再解压缩包覆盖。
 
-Components
-=====
+（2）软破机需要更换注入器里的payload.bin，如注入器里已经是hekate4.2或以上版本则无需更新。
 
-Atmosphère consists of multiple components, each of which replaces/modifies a different component of the system:
+短接+注入开机，点击launch，根据选择进入
 
-* Fusée: First-stage Loader, responsible for loading and validating stage 2 (custom TrustZone) plus package2 (Kernel/FIRM sysmodules), and patching them as needed. This replaces all functionality normally in Package1loader/NX Bootloader.
-    * Sept: Payload used to enable support for runtime key derivation on 7.0.0.
-* Exosphère: Customized TrustZone, to run a customized Secure Monitor
-* Thermosphère: EL2 EmuNAND support, i.e. backing up and using virtualized/redirected NAND images
-* Stratosphère: Custom Sysmodule(s), both Rosalina style to extend the kernel/provide new features, and of the loader reimplementation style to hook important system actions
-* Troposphère: Application-level Horizon OS patches, used to implement desirable CFW features
+cfw(sysnand)：真实系统破解状态，Hekate的FSS0引导，可以正版修改
 
-Licensing
-=====
+cfw(emunand)：虚拟系统破解状态，Hekate的FSS0引导，可以破解游戏
 
-This software is licensed under the terms of the GPLv2, with exemptions for specific projects noted below.
+ofw(sysnand)：真实系统不破状态，Hekate的FSS0引导，可以正版联机
 
-You can find a copy of the license in the [LICENSE file](LICENSE).
+cfw(auto)：大气层原版Fusee引导，根据emummc.ini自动识别真实和虚拟系统
 
-Exemptions:
-* The [yuzu Nintendo Switch emulator](https://github.com/yuzu-emu/yuzu) and the [Ryujinx Team and Contributors](https://github.com/orgs/Ryujinx) are exempt from GPLv2 licensing. They are permitted, each at their individual discretion, to instead license any source code authored for the Atmosphère project as either GPLv2 or later or the [MIT license](https://github.com/Atmosphere-NX/Atmosphere/blob/master/docs/licensing_exemptions/MIT_LICENSE). In doing so, they may alter, supplement, or entirely remove the copyright notice for each file they choose to relicense. Neither the Atmosphère project nor its individual contributors shall assert their moral rights against any of the aforementioned projects.
-* [Nintendo](https://github.com/Nintendo) is exempt from GPLv2 licensing and may (at its option) instead license any source code authored for the Atmosphère project under the Zero-Clause BSD license.
-
-Credits
-=====
-
-Atmosphère is currently being developed and maintained by __SciresM__, __TuxSH__, __hexkyz__, and __fincs__.<br>
-In no particular order, we credit the following for their invaluable contributions:
-
-* __switchbrew__ for the [libnx](https://github.com/switchbrew/libnx) project and the extensive [documentation, research and tool development](http://switchbrew.org) pertaining to the Nintendo Switch.
-* __devkitPro__ for the [devkitA64](https://devkitpro.org/) toolchain and libnx support.
-* __ReSwitched Team__ for additional [documentation, research and tool development](https://reswitched.team/) pertaining to the Nintendo Switch.
-* __ChaN__ for the [FatFs](http://elm-chan.org/fsw/ff/00index_e.html) module.
-* __Marcus Geelnard__ for the [bcl-1.2.0](https://sourceforge.net/projects/bcl/files/bcl/bcl-1.2.0) library.
-* __naehrwert__ and __st4rk__ for the original [hekate](https://github.com/nwert/hekate) project and its hwinit code base.
-* __CTCaer__ for the continued [hekate](https://github.com/CTCaer/hekate) project's fork and the [minerva_tc](https://github.com/CTCaer/minerva_tc) project.
-* __m4xw__ for development of the [emuMMC](https://github.com/m4xw/emummc) project.
-* __Riley__ for suggesting "Atmosphere" as a Horizon OS reimplementation+customization project name.
-* __hedgeberg__ for research and hardware testing.
-* __lioncash__ for code cleanup and general improvements.
-* __jaames__ for designing and providing Atmosphère's graphical resources.
-* Everyone who submitted entries for Atmosphère's [splash design contest](https://github.com/Atmosphere-NX/Atmosphere-splashes).
-* _All those who actively contribute to the Atmosphère repository._
+（3）硬破机直接点击电源键开机，之后与软破机launch方式一样，补丁机与续航和lite机无差别。
