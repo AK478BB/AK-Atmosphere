@@ -36,4 +36,6 @@ tinfoil.nro自动安装
 
 默认tesla插件启动
 
-除了Tesla-Menu外，为避免冲突，其余插件禁止自启动，可在deepsea toolbox中设置，设置完毕按home保存退出重启。如因自启致死机，可在电脑读取TF卡，删除atmosphere/contents/对应插件编号/flags/boot2.flag
+除了Tesla-Menu外，为避免冲突，其余插件禁止自启动，可在deepsea toolbox中设置，设置完毕按home保存退出重启。
+
+如因自启致死机，可在电脑读取TF卡，删除atmosphere/contents/对应插件编号/flags/boot2.flag
