@@ -1,2 +1,1 @@
-
-<img src="/AK478BB/AK-Atmosphere/blob/master/AK-ATM-LOGO.jpg" style="max-width: 100%;">
+AK原版大气层个人整合包
