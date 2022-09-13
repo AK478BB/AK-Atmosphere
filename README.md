@@ -31,5 +31,3 @@ AK原版大气层个人整合包
   CommonProblemResolver：主机启动修复软件
 
   TegraExplorer：主机文件管理软件
-
-https://github.com/AK478BB/AK-Atmosphere/blob/master/AK-ATM-LOGO.jpg?raw=true
