@@ -1,4 +1,28 @@
 # Changelog
+## 1.4.0
++ Support was added for 15.0.0.
+  + `mesosphère` was updated to reflect the latest official kernel behavior.
+  + `ncm` was updated to reflect the latest official kernel behavior.
++ A number of minor issues were fixed and improvements were made, including:
+  + The capacity limit on registered add-on contents was fixed in NCM to reflect the increase that occurred in 12.0.0.
+  + An off-by-one was fixed in mesosphere when computing the new value for an address arbiter signaled with ModifyByWaitingCountIfEqual.
+  + dmnt.gen2's gdbstub now sanitizes thread names to prevent invalid characters from breaking gdb.
+  + dmnt.gen2's gdbstub now reports the architecture tag correctly when attached to 32-bit processes.
+  + Support for program-specific html manual content overrides was added for non-hbl takeover context.
+  + A bug was fixed in how emummc constructed the alternate Nintendo directory path.
+    + Previously, this was using `/*/Nintendo/Nintendo` instead of `/*/Nintendo`.
+    + Code was added to automatically move the old folders to the new ones when booting into emummc.
+  + A bug was fixed in boot that caused an incorrectly low input voltage limit to be set.
++ General system stability improvements to enhance the user's experience.
+## 1.3.2
++ Support was improved for 14.0.0+.
+  + `loader` was updated to reflect the latest official behaviors.
+  + `ro` was  updated to reflect the latest official behaviors.
++ A number of minor issues were fixed and improvements were made, including:
+  + A memory leak was fixed in filesystem path management; this could cause a crash when launching games ~100 times, or when deleting/re-downloading games.
+  + A bug was fixed that could cause threads to not see a newly signaled semaphore.
+  + A number of minor inaccuracies were fixed in the updated FileSystem APIs.
++ General system stability improvements to enhance the user's experience.
 ## 1.3.1
 + Support was added for 14.1.0.
 + A number of minor under the hood improvements to accuracy were made to better reflect latest official system module behavior, particularly around FS apis.

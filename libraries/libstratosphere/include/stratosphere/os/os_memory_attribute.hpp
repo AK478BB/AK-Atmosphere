@@ -14,24 +14,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
-#include "os_multiple_wait_holder_base.hpp"
+#include <vapours.hpp>
+#include <stratosphere/os/os_common_types.hpp>
+#include <stratosphere/os/os_memory_common.hpp>
 
-namespace ams::os::impl {
+namespace ams::os {
 
-    class MultiWaitHolderOfHandle : public MultiWaitHolderOfKernelObject {
-        private:
-            NativeHandle m_handle;
-        public:
-            explicit MultiWaitHolderOfHandle(NativeHandle h) : m_handle(h) { /* ... */ }
-
-            /* IsSignaled, GetHandle both implemented. */
-            virtual TriBool IsSignaled() const override {
-                return TriBool::Undefined;
-            }
-
-            virtual NativeHandle GetHandle() const override {
-                return m_handle;
-            }
+    enum MemoryAttribute {
+        MemoryAttribute_Normal,
+        MemoryAttribute_Uncached,
     };
+
+    void SetMemoryAttribute(uintptr_t address, size_t size, MemoryAttribute attr);
 
 }

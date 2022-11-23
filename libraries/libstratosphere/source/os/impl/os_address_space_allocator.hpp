@@ -25,10 +25,13 @@ namespace ams::os::impl {
         AddressAllocationResult_OutOfSpace,
     };
 
-    template<std::unsigned_integral AddressType, std::unsigned_integral SizeType>
+    template<std::unsigned_integral AddressType_, std::unsigned_integral SizeType_>
     class AddressSpaceAllocatorBase {
         NON_COPYABLE(AddressSpaceAllocatorBase);
         NON_MOVEABLE(AddressSpaceAllocatorBase);
+        public:
+            using AddressType = AddressType_;
+            using SizeType    = SizeType_;
         private:
             static constexpr size_t MaxForbiddenRegions = 2;
         private:
@@ -42,7 +45,7 @@ namespace ams::os::impl {
         public:
             AddressSpaceAllocatorBase(u64 start_address, u64 end_address, SizeType guard_size, const AddressSpaceAllocatorForbiddenRegion *forbidden_regions, size_t num_forbidden_regions);
 
-            AddressType AllocateSpace(SizeType size, SizeType align, SizeType align_offset);
+            AddressType AllocateSpace(SizeType size, SizeType align, SizeType align_offset, AddressSpaceGenerateRandomFunction generate_random);
 
             bool CheckGuardSpace(AddressType address, SizeType size, SizeType guard_size);
         private:
@@ -50,6 +53,8 @@ namespace ams::os::impl {
         public:
             virtual bool CheckFreeSpace(AddressType address, SizeType size) = 0;
     };
+
+    u64 AddressSpaceAllocatorDefaultGenerateRandom(u64 max);
 
 }
 

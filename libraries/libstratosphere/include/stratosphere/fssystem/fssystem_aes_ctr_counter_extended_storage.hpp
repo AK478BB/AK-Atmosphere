@@ -42,8 +42,14 @@ namespace ams::fssystem {
             };
 
             struct Entry {
+                enum class Encryption : u8 {
+                    Encrypted    = 0,
+                    NotEncrypted = 1,
+                };
+
                 u8 offset[sizeof(s64)];
-                s32 reserved;
+                Encryption encryption_value;
+                u8 reserved[3];
                 s32 generation;
 
                 void SetOffset(s64 value) {
@@ -117,6 +123,8 @@ namespace ams::fssystem {
                 AMS_UNUSED(size);
                 R_THROW(fs::ResultUnsupportedSetSizeForAesCtrCounterExtendedStorage());
             }
+
+            Result GetEntryList(Entry *out_entries, s32 *out_entry_count, s32 entry_count, s64 offset, s64 size);
         private:
             Result Initialize(IAllocator *allocator, const void *key, size_t key_size, u32 secure_value, fs::SubStorage data_storage, fs::SubStorage table_storage);
     };

@@ -199,6 +199,7 @@ namespace ams::dmnt {
             "l<?xml version=\"1.0\"?>"
             "<!DOCTYPE target SYSTEM \"gdb-target.dtd\">"
             "<target>"
+            "<architecture>arm</architecture>"
             "<xi:include href=\"arm-core.xml\"/>"
             "<xi:include href=\"arm-vfp.xml\"/>"
             "</target>";
@@ -2353,8 +2354,36 @@ namespace ams::dmnt {
                     m_debug_process.GetThreadName(name, thread_ids[i]);
                     name[sizeof(name) - 1] = '\x00';
 
+                    /* Sanitize the thread name. */
+                    char sanitized[os::ThreadNameLengthMax * 4 + 1];
+                    {
+                        char *cur = sanitized;
+                        for (size_t i = 0; i < util::size(name); ++i) {
+                            if (name[i] == '<') {
+                                *(cur++) = '&';
+                                *(cur++) = 'l';
+                                *(cur++) = 't';
+                                *(cur++) = ';';
+                            } else if (name[i] == '>') {
+                                *(cur++) = '&';
+                                *(cur++) = 'g';
+                                *(cur++) = 't';
+                                *(cur++) = ';';
+                            } else if (name[i] == '*' || name[i] == '#' || name[i] == '$' || name[i] == '}') {
+                                *(cur++) = '}';
+                                *(cur++) = name[i] ^ 0x20;
+                            } else {
+                                *(cur++) = name[i];
+
+                                if (name[i] == '\x00') {
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
                     /* Set the thread entry */
-                    AppendReplyFormat(dst_cur, dst_end, "<thread id=\"p%lx.%lx\" core=\"%u\" name=\"%s\" />", m_process_id.value, thread_ids[i], core, name);
+                    AppendReplyFormat(dst_cur, dst_end, "<thread id=\"p%lx.%lx\" core=\"%u\" name=\"%s\" />", m_process_id.value, thread_ids[i], core, sanitized);
                 }
             }
 

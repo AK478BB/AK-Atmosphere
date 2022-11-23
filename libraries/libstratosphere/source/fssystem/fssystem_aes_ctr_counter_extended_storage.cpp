@@ -87,7 +87,11 @@ namespace ams::fssystem {
         AMS_ASSERT(decryptor != nullptr);
 
         /* Initialize the bucket tree table. */
-        R_TRY(m_table.Initialize(allocator, node_storage, entry_storage, NodeSize, sizeof(Entry), entry_count));
+        if (entry_count > 0) {
+            R_TRY(m_table.Initialize(allocator, node_storage, entry_storage, NodeSize, sizeof(Entry), entry_count));
+        } else {
+            m_table.Initialize(NodeSize, 0);
+        }
 
         /* Set members. */
         m_data_storage   = data_storage;
@@ -106,6 +110,66 @@ namespace ams::fssystem {
         }
     }
 
+    Result AesCtrCounterExtendedStorage::GetEntryList(Entry *out_entries, s32 *out_entry_count, s32 entry_count, s64 offset, s64 size) {
+        /* Validate pre-conditions. */
+        AMS_ASSERT(offset >= 0);
+        AMS_ASSERT(size >= 0);
+        AMS_ASSERT(this->IsInitialized());
+
+        /* Clear the out count. */
+        R_UNLESS(out_entry_count != nullptr, fs::ResultNullptrArgument());
+        *out_entry_count = 0;
+
+        /* Succeed if there's no range. */
+        R_SUCCEED_IF(size == 0);
+
+        /* If we have an output array, we need it to be non-null. */
+        R_UNLESS(out_entries != nullptr || entry_count == 0, fs::ResultNullptrArgument());
+
+        /* Check that our range is valid. */
+        BucketTree::Offsets table_offsets;
+        R_TRY(m_table.GetOffsets(std::addressof(table_offsets)));
+
+        R_UNLESS(table_offsets.IsInclude(offset, size), fs::ResultOutOfRange());
+
+        /* Find the offset in our tree. */
+        BucketTree::Visitor visitor;
+        R_TRY(m_table.Find(std::addressof(visitor), offset));
+        {
+            const auto entry_offset = visitor.Get<Entry>()->GetOffset();
+            R_UNLESS(0 <= entry_offset && table_offsets.IsInclude(entry_offset), fs::ResultInvalidAesCtrCounterExtendedEntryOffset());
+        }
+
+        /* Prepare to loop over entries. */
+        const auto end_offset = offset + static_cast<s64>(size);
+        s32 count = 0;
+
+        auto cur_entry = *visitor.Get<Entry>();
+        while (cur_entry.GetOffset() < end_offset) {
+            /* Try to write the entry to the out list */
+            if (entry_count != 0) {
+                if (count >= entry_count) {
+                    break;
+                }
+                std::memcpy(out_entries + count, std::addressof(cur_entry), sizeof(Entry));
+            }
+
+            count++;
+
+            /* Advance. */
+            if (visitor.CanMoveNext()) {
+                R_TRY(visitor.MoveNext());
+                cur_entry = *visitor.Get<Entry>();
+            } else {
+                break;
+            }
+        }
+
+        /* Write the output count. */
+        *out_entry_count = count;
+        R_SUCCEED();
+    }
+
     Result AesCtrCounterExtendedStorage::Read(s64 offset, void *buffer, size_t size) {
         /* Validate preconditions. */
         AMS_ASSERT(offset >= 0);
@@ -122,7 +186,7 @@ namespace ams::fssystem {
         BucketTree::Offsets table_offsets;
         R_TRY(m_table.GetOffsets(std::addressof(table_offsets)));
 
-        R_UNLESS(table_offsets.IsInclude(offset, size),    fs::ResultOutOfRange());
+        R_UNLESS(table_offsets.IsInclude(offset, size), fs::ResultOutOfRange());
 
         /* Read the data. */
         R_TRY(m_data_storage.Read(offset, buffer, size));
@@ -174,15 +238,18 @@ namespace ams::fssystem {
             const auto cur_size       = static_cast<size_t>(std::min(remaining_size, data_size));
             AMS_ASSERT(cur_size <= size);
 
-            /* Make the CTR for the data we're decrypting. */
-            const auto counter_offset = m_counter_offset + cur_entry_offset + data_offset;
-            NcaAesCtrUpperIv upper_iv = { .part = { .generation = static_cast<u32>(cur_entry.generation), .secure_value = m_secure_value } };
+            /* If necessary, perform decryption. */
+            if (cur_entry.encryption_value == Entry::Encryption::Encrypted) {
+                /* Make the CTR for the data we're decrypting. */
+                const auto counter_offset = m_counter_offset + cur_entry_offset + data_offset;
+                NcaAesCtrUpperIv upper_iv = { .part = { .generation = static_cast<u32>(cur_entry.generation), .secure_value = m_secure_value } };
 
-            u8 iv[IvSize];
-            AesCtrStorageByPointer::MakeIv(iv, IvSize, upper_iv.value, counter_offset);
+                u8 iv[IvSize];
+                AesCtrStorageByPointer::MakeIv(iv, IvSize, upper_iv.value, counter_offset);
 
-            /* Decrypt. */
-            m_decryptor->Decrypt(cur_data, cur_size, m_key, KeySize, iv, IvSize);
+                /* Decrypt. */
+                m_decryptor->Decrypt(cur_data, cur_size, m_key, KeySize, iv, IvSize);
+            }
 
             /* Advance. */
             cur_data   += cur_size;

@@ -21,10 +21,14 @@
 #include <stratosphere/os/os_memory_common.hpp>
 #include <stratosphere/os/os_memory_fence.hpp>
 #include <stratosphere/os/os_memory_permission.hpp>
-#include <stratosphere/os/os_memory_heap_api.hpp>
+#include <stratosphere/os/os_memory_attribute.hpp>
+#include <stratosphere/os/os_memory_heap.hpp>
 #include <stratosphere/os/os_virtual_address_memory.hpp>
 #include <stratosphere/os/os_native_handle.hpp>
 #include <stratosphere/os/os_process_handle_api.hpp>
+#include <stratosphere/os/os_process_memory_api.hpp>
+#include <stratosphere/os/os_process_code_memory_api.hpp>
+#include <stratosphere/os/os_insecure_memory_api.hpp>
 #include <stratosphere/os/os_random.hpp>
 #include <stratosphere/os/os_mutex.hpp>
 #include <stratosphere/os/os_condition_variable.hpp>

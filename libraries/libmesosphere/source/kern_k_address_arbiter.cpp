@@ -123,7 +123,7 @@ namespace ams::kern {
             s32 new_value;
             if (count <= 0) {
                 if ((it != m_tree.end()) && (it->GetAddressArbiterKey() == addr)) {
-                    new_value = value - 2;
+                    new_value = value - 1;
                 } else {
                     new_value = value + 1;
                 }
@@ -132,7 +132,7 @@ namespace ams::kern {
                     auto tmp_it = it;
                     s32 tmp_num_waiters = 0;
                     while ((++tmp_it != m_tree.end()) && (tmp_it->GetAddressArbiterKey() == addr)) {
-                        if ((tmp_num_waiters++) >= count) {
+                        if ((++tmp_num_waiters) >= count) {
                             break;
                         }
                     }

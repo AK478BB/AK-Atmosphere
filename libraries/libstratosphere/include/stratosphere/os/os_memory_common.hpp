@@ -18,16 +18,16 @@
 
 namespace ams::os {
 
-    constexpr inline size_t MemoryPageSize      = 0x1000;
-
-    constexpr inline size_t MemoryBlockUnitSize = 0x200000;
+    using AddressSpaceGenerateRandomFunction = u64 (*)(u64);
 
     enum MemoryPermission {
-        MemoryPermission_None      = (0 << 0),
-        MemoryPermission_ReadOnly  = (1 << 0),
-        MemoryPermission_WriteOnly = (1 << 1),
+        MemoryPermission_None        = (0 << 0),
+        MemoryPermission_ReadOnly    = (1 << 0),
+        MemoryPermission_WriteOnly   = (1 << 1),
+        MemoryPermission_ExecuteOnly = (1 << 2),
 
-        MemoryPermission_ReadWrite = MemoryPermission_ReadOnly | MemoryPermission_WriteOnly,
+        MemoryPermission_ReadWrite   = MemoryPermission_ReadOnly | MemoryPermission_WriteOnly,
+        MemoryPermission_ReadExecute = MemoryPermission_ReadOnly | MemoryPermission_ExecuteOnly,
     };
 
     #if defined(ATMOSPHERE_OS_HORIZON)

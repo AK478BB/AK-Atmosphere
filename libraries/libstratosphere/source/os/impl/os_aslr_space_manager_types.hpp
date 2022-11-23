@@ -39,6 +39,9 @@ namespace ams::os::impl {
         NON_COPYABLE(AslrSpaceManagerTemplate);
         NON_MOVEABLE(AslrSpaceManagerTemplate);
         private:
+            using AddressType = typename Allocator::AddressType;
+            using SizeType    = typename Allocator::SizeType;
+        private:
             Impl m_impl;
             Allocator m_allocator;
         public:
@@ -46,28 +49,34 @@ namespace ams::os::impl {
                 /* ... */
             }
 
-            uintptr_t AllocateSpace(size_t size) {
+            #if defined(ATMOSPHERE_OS_HORIZON)
+            AslrSpaceManagerTemplate(os::NativeHandle process_handle) : m_impl(process_handle), m_allocator(m_impl.GetAslrSpaceBeginAddress(process_handle), m_impl.GetAslrSpaceEndAddress(process_handle), AslrSpaceGuardSize, m_impl.GetForbiddenRegions(), m_impl.GetForbiddenRegionCount(), process_handle) {
+                /* ... */
+            }
+            #endif
+
+            AddressType AllocateSpace(SizeType size, SizeType align_offset, AddressSpaceGenerateRandomFunction generate_random) {
                 /* Try to allocate a large-aligned space, if we can. */
-                if (size >= AslrSpaceLargeAlign) {
-                    if (auto large_align = m_allocator.AllocateSpace(size, AslrSpaceLargeAlign, 0); large_align != 0) {
+                if (align_offset || (size / AslrSpaceLargeAlign) != 0) {
+                    if (auto large_align = m_allocator.AllocateSpace(size, AslrSpaceLargeAlign, align_offset & (AslrSpaceLargeAlign - 1), generate_random); large_align != 0) {
                         return large_align;
                     }
                 }
 
                 /* Allocate a page-aligned space. */
-                return m_allocator.AllocateSpace(size, MemoryPageSize, 0);
+                return m_allocator.AllocateSpace(size, MemoryPageSize, 0, generate_random);
             }
 
-            bool CheckGuardSpace(uintptr_t address, size_t size) {
+            bool CheckGuardSpace(AddressType address, SizeType size) {
                 return m_allocator.CheckGuardSpace(address, size, AslrSpaceGuardSize);
             }
 
             template<typename MapFunction, typename UnmapFunction>
-            Result MapAtRandomAddress(uintptr_t *out, size_t size, MapFunction map_function, UnmapFunction unmap_function) {
+            Result MapAtRandomAddressWithCustomRandomGenerator(AddressType *out, MapFunction map_function, UnmapFunction unmap_function, SizeType size, SizeType align_offset, AddressSpaceGenerateRandomFunction generate_random) {
                 /* Try to map up to 64 times. */
-                for (int i = 0; i < 64; ++i) {
+                for (auto i = 0; i < 64; ++i) {
                     /* Reserve space to map the memory. */
-                    const uintptr_t map_address = this->AllocateSpace(size);
+                    const uintptr_t map_address = this->AllocateSpace(size, align_offset, generate_random);
                     if (map_address == 0) {
                         break;
                     }
@@ -82,6 +91,9 @@ namespace ams::os::impl {
                     if (!this->CheckGuardSpace(map_address, size)) {
                         /* We don't have guard space, so unmap. */
                         unmap_function(map_address, size);
+
+                        /* NOTE: Nintendo is missing this continue; this is almost certainly a bug. */
+                        /* This will cause them to incorrectly return success after unmapping if guard space is not present. */
                         continue;
                     }
 
@@ -92,6 +104,11 @@ namespace ams::os::impl {
 
                 /* We failed to map. */
                 R_THROW(os::ResultOutOfAddressSpace());
+            }
+
+            template<typename MapFunction, typename UnmapFunction>
+            Result MapAtRandomAddress(AddressType *out, MapFunction map_function, UnmapFunction unmap_function, SizeType size, SizeType align_offset) {
+                R_RETURN(this->MapAtRandomAddressWithCustomRandomGenerator(out, map_function, unmap_function, size, align_offset, os::impl::AddressSpaceAllocatorDefaultGenerateRandom));
             }
     };
 
