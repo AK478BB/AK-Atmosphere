@@ -32,4 +32,4 @@ AK原版大气层个人整合包
 
   TegraExplorer：主机文件管理软件
 
-<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK-ATM-LOGO.jpg?raw=true" align="center" width="100%" />
+<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK-ATM-LOGO.jpg?raw=true" align="center" width="80%" />
