@@ -32,4 +32,4 @@ CommonProblemResolver：主机启动修复软件
 
 TegraExplorer：主机文件管理软件
 
-<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK_ATM_1.5.0_0227.jpg?raw=true" align="center" width="80%" />
+<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK_ATM_1.5.1_0329.jpg?raw=true" align="center" width="80%" />
