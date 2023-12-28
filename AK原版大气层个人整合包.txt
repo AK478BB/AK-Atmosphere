@@ -1,13 +1,13 @@
-AK原版大气层1.6.2个人整合包（2023.12.16）
+AK原版大气层1.6.2个人整合包（2023.12.28）
 
 【00—此次版本更新的特别说明】
-（1）和1210版相比，1216版更新DBI--v654，如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包。
-AK_ATM_1.6.2_1216.7z是AK原版大气层1.6.2个人整合包1216版
+（1）和1216版相比，1228版更新DBI--v657，FPSLocker.ovl--v1.2.6a和nxdumptool，如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包。
+AK_ATM_1.6.2_1228.7z是AK原版大气层1.6.2个人整合包1228版
 1st-ATM1.6.2-Hekate6.0.7-sigpatch.zip是第1版可覆盖升级的大气层1.6.2三件套核心文件
 （2）从AK原版大气层1.6.2个人整合包1216版开始，AK将新增加一些非必须或占系统较多资源的插件以叠加包的方式分享，叠加分享方式适合玩家自行DIY，未来AK也会从大气层整合包里逐步将一些非必须的插件移出来，等于整合包的精简，这样有效提升大气层整合包的稳定性，但是叠加包的插件并不会实时更新，如果大家要追新版本，请根据叠加包自带文本内容在Github等网站地址下最新的文件替换。
-AK原版大气层1.6.2个人整合包1216版的叠加包
+AK原版大气层1.6.2个人整合包1228版的叠加包
 叠加包01--AK极限超频插件20231112更新
-叠加包02--AK游戏锁帧插件20231216更新
+叠加包02--AK游戏锁帧插件20231228更新
 叠加包序号不存在任何先后顺序，也是向下兼容，你可以近似认为类似游戏DLC，可有可无，可先可后。但是和游戏不一样，大气层的插件越多，系统越不稳定，越不流畅。
 （3）AK在整合大气层的时候也一直会使用英文插件，但不影响大家随时删除和替换其他人发布的各种特斯拉中文版、终极版等插件整合包，替换方法很简单，删除AK大气层整合包里的Atmosphere/contents/，config/，Switch/.overlays/和saltysd这四个文件夹后，把别人发布的特斯拉插件包直接覆盖上去就好了。
 missioncontrol插件在Atmosphere/exefs_patches/有bluetooth_patches/和btm_patches/两个补丁文件夹，不需要missioncontrol的也可以删除。Emuiibo/是emuiibo插件的文件夹，Saltysd是ReverseNX插件的文件夹，如果发现相册里的NRO插件重复，可以看教程：手把手教你管理相册的NRO插件，删除不需要的文件。
@@ -133,10 +133,12 @@ https://github.com/ndeadly/MissionControl/releases
 有线手柄插件
 https://github.com/cathery/sys-con/releases
 （9）ReverseNX-RT--v2.0.0
-底座手持转换插件，包含SaltyNX--v0.7.1、ReverseNX-Tool.nro--v3.1.3
+底座手持转换插件，包含SaltyNX--v0.7.1、ReverseNX-Tool.nro--v3.1.3和FPSLocker.ovl--v1.2.6a
 https://github.com/masagrator/ReverseNX-RT/releases
 https://github.com/masagrator/SaltyNX/releases
 https://github.com/masagrator/ReverseNX-Tool/releases
+https://github.com/masagrator/FPSLocker/releases
+https://github.com/masagrator/FPSLocker-Warehouse
 （10）Emuiibo--v1.1.1
 Amiibo模拟插件
 https://github.com/XorTroll/emuiibo/releases
@@ -148,12 +150,12 @@ https://github.com/TTghostsemir/fastCFWswitch/releases
 https://github.com/PewnyPL/ldn_mitm/releases
 https://github.com/spacemeowx2/ldn_mitm/releases
 二、Nro插件列表
-（0）reboot_to_payload.nro--v1.2
+（0）reboot_to_payload--v1.2
 一键关机重启工具，支持Switch全机型
 源文件Safe_Reboot_Shutdown.nro，改名reboot_to_payload.nro，比大气层reboot_to_payload.nro好
 在App name前加00，自动排到相册第一个。
 https://github.com/dezem/Safe_Reboot_Shutdown/releases
-（1）Switch_90DNS_tester.nro--v1.0.4
+（1）Switch_90DNS_tester--v1.0.4
 联网检测是否屏蔽任天堂服务器
 https://github.com/meganukebmp/Switch_90DNS_tester/releases
 （2）aio-switch-updater--v2.23.2
@@ -200,7 +202,7 @@ https://github.com/J-D-K/JKSV/releases
 （15）linkalho--v2.0.1
 模拟关联任天堂账号工具
 https://github.com/rdmrocha/linkalho/releases
-（16）N-Xplorer.nro--v0.7.1
+（16）N-Xplorer--v0.7.1
 文件管理工具，有文本编辑功能
 https://github.com/CompSciOrBust/N-Xplorer/releases
 （17）NX-Activity-Log--v1.5.0
@@ -258,4 +260,3 @@ https://github.com/hwfly-nx/hwfly-toolbox/releases
 刷完sdloader.enc后支持不插SD卡，开机后按音量+和-进正版系统
 解压缩后复制sdloader.enc到SD卡根目录
 https://github.com/hwfly-nx/firmware/releases
-
