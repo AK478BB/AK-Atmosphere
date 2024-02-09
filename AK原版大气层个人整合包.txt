@@ -1,13 +1,12 @@
-AK原版大气层1.6.2个人整合包（2023.12.28）
+AK原版大气层1.6.2个人整合包（2024.2.9）
 
 【00—此次版本更新的特别说明】
-（1）和1216版相比，1228版更新DBI--v657，FPSLocker.ovl--v1.2.6a和nxdumptool，如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包。
-AK_ATM_1.6.2_1228.7z是AK原版大气层1.6.2个人整合包1228版
-1st-ATM1.6.2-Hekate6.0.7-sigpatch.zip是第1版可覆盖升级的大气层1.6.2三件套核心文件
+（1）和0202版相比，0209版更新游戏锁帧插件FPSLocker.ovl--v1.2.7和FPSLocker-Warehouse的补丁，如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包。
+AK_ATM_1.6.2_0209.7z是AK原版大气层1.6.2个人整合包0209版
 （2）从AK原版大气层1.6.2个人整合包1216版开始，AK将新增加一些非必须或占系统较多资源的插件以叠加包的方式分享，叠加分享方式适合玩家自行DIY，未来AK也会从大气层整合包里逐步将一些非必须的插件移出来，等于整合包的精简，这样有效提升大气层整合包的稳定性，但是叠加包的插件并不会实时更新，如果大家要追新版本，请根据叠加包自带文本内容在Github等网站地址下最新的文件替换。
-AK原版大气层1.6.2个人整合包1228版的叠加包
+AK原版大气层1.6.2个人整合包0209版的叠加包
 叠加包01--AK极限超频插件20231112更新
-叠加包02--AK游戏锁帧插件20231228更新
+叠加包02--AK游戏锁帧插件20240209更新
 叠加包序号不存在任何先后顺序，也是向下兼容，你可以近似认为类似游戏DLC，可有可无，可先可后。但是和游戏不一样，大气层的插件越多，系统越不稳定，越不流畅。
 （3）AK在整合大气层的时候也一直会使用英文插件，但不影响大家随时删除和替换其他人发布的各种特斯拉中文版、终极版等插件整合包，替换方法很简单，删除AK大气层整合包里的Atmosphere/contents/，config/，Switch/.overlays/和saltysd这四个文件夹后，把别人发布的特斯拉插件包直接覆盖上去就好了。
 missioncontrol插件在Atmosphere/exefs_patches/有bluetooth_patches/和btm_patches/两个补丁文件夹，不需要missioncontrol的也可以删除。Emuiibo/是emuiibo插件的文件夹，Saltysd是ReverseNX插件的文件夹，如果发现相册里的NRO插件重复，可以看教程：手把手教你管理相册的NRO插件，删除不需要的文件。
@@ -120,7 +119,7 @@ https://github.com/WerWolv/ovl-sysmodules/releases
 （4）ovlEdiZon--v1.0.7
 金手指游戏修改
 https://github.com/proferabg/EdiZon-Overlay/releases
-（5）Status-Monitor-Overlay--v1.0.2
+（5）Status-Monitor-Overlay--v1.0.3a
 系统状态监视
 https://github.com/masagrator/Status-Monitor-Overlay/releases
 （6）sys-clk--v2.0.0_a（取消GPU限制）
@@ -133,7 +132,7 @@ https://github.com/ndeadly/MissionControl/releases
 有线手柄插件
 https://github.com/cathery/sys-con/releases
 （9）ReverseNX-RT--v2.0.0
-底座手持转换插件，包含SaltyNX--v0.7.1、ReverseNX-Tool.nro--v3.1.3和FPSLocker.ovl--v1.2.6a
+底座手持转换插件，包含SaltyNX--v0.7.1、ReverseNX-Tool.nro--v3.1.3和FPSLocker.ovl--v1.2.7
 https://github.com/masagrator/ReverseNX-RT/releases
 https://github.com/masagrator/SaltyNX/releases
 https://github.com/masagrator/ReverseNX-Tool/releases
@@ -173,7 +172,7 @@ https://github.com/EmreTech/Calculator_NX/releases
 （6）Checkpoint--v3.8.0
 游戏存档管理工具
 https://github.com/FlagBrew/Checkpoint/releases
-（7）DBI--v654
+（7）DBI--v658
 游戏安装，存档管理和文件传输工具
 https://github.com/rashevskyv/dbi/releases
 （8）DeepSea-Toolbox--v6.0.0
@@ -189,7 +188,7 @@ https://github.com/mtheall/ftpd/releases
 （11）Goldleaf--v1.0.0
 文件管理工具
 https://github.com/XorTroll/Goldleaf/releases
-（12）Haku33--v6.1
+（12）Haku33--v6.2
 系统洗白工具，OLED可用
 https://github.com/StarDustCFW/Haku33/releases
 （13）HB appstore--v2.3.2
@@ -233,7 +232,7 @@ https://github.com/CaiMiao/Tencent-switcher-GUI/releases
 （24）Tinfoil--v17.0v3
 黑商店，文件管理工具，自动安装前端
 http://tinfoil.io/Download#download
-（25）wiliwili--v1.2.2
+（25）wiliwili--v1.3.0
 哔哩哔哩播放器，联网，自选安装前端
 https://github.com/xfangfang/wiliwili/releases
 三、Payload插件
@@ -253,10 +252,15 @@ https://github.com/suchmememanyskill/TegraExplorer/releases
 https://github.com/suchmememanyskill/TegraScript
 https://github.com/JeffVi/Prodinfo-Restore-TegraScript
 （4）hwfly_toolbox--v1.1.1
-hwfly工具箱，硬破专用，支持不可更新固件的hwfly芯片免拆机更新sdloader
+hwfly芯片工具箱，hwfly芯片硬破专用，支持不可更新固件的hwfly芯片免拆机更新sdloader
 玩Lakka，Ubuntu和Android必备
 升级正版系统后需再刷sdloader.enc一次，升级虚拟系统不影响
 https://github.com/hwfly-nx/hwfly-toolbox/releases
 刷完sdloader.enc后支持不插SD卡，开机后按音量+和-进正版系统
 解压缩后复制sdloader.enc到SD卡根目录
 https://github.com/hwfly-nx/firmware/releases
+（5）picofly_toolbox--v0.2
+树莓派芯片工具箱，rp2040芯片硬破专用，支持免拆机更新sdloader和树莓派固件
+升级树莓派固件是根目录update.bin，能正常开机就不用升级树莓派固件
+https://github.com/rehius/usk/releases
+https://github.com/Ansem-SoD/Picofly/tree/main/Firmwares
