@@ -1,37 +1,29 @@
-AK原版大气层1.6.2个人整合包（2024.3.14）
+# AK大气层整合包1.7.0暂缓更新，目前有大气层1.7.0的三件套，可以直接覆盖使用，但是cfw-auto不能玩破解游戏。
 
-更新须知
+【AK杂谈】大气层1.7.0后sigpatch签名补丁的三种解决办法
 
-（1）如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包
+大气层1.7.0开始，SciresM大神删除KIP的加载功能，原来只是为了nogc卡槽保护，但是这个功能已集成在stratosphere.romfs内核中，通过stratosphere.ini调设定，不需要额外补丁。这个删除KIP的功能会影响FS补丁的加载，极限超频的loader.kip等一系列问题。
 
-如果加过插件，也可以删除内存卡上旧的atmosphere/contents，config，switch/.overlays和saltysd四个目录后覆盖新的AK大气层整合包。
+目前看来有三种方法解决这种办法：
 
-如原来别人的整合包上覆盖出现问题，最稳的，请保留nintendo和emummc后删除其它，再解压缩包覆盖。
+（1）因为大气层三件套是atmosphere+hekate+sigpatch，启动系统的方法是四种，fusee大气层自动识别不能再加载KIP补丁，但是通过Hekate的fss0引导的真实（破解）系统，虚拟（破解）系统的KIP是通过bootloader/patch.ini实现，所以不受大气层1.7.0升级导致不能玩破解游戏的影响。
 
-（2）不区分软破和硬破机，软破是短接+注入开机，TX注入器直接用，大气层注入器替换内置Payload.bin，整合包根目录是最新的Hekate重命名的payload.bin，如注入器内置hekate4.2或以上则无需替换。硬破是直接点开机键开机，之后与软破无差别。
+https://www.tekqart.com/thread-289271-1-1.html
 
-点击launch，根据选择进入
+左起1，2，3都是fss0引导，最右4是fusee引导。
 
-cfw(sysnand)：真实系统破解状态，Hekate的FSS0引导，可以正版修改
+（2）sigpatch可以是IPS加载，也可以是通过sys-patch的插件签名补丁的方法，目前原版sys-patch被删库，后续有大神接着开发，论坛有转载，相当于不需要sigpatch组件，直接在破解系统里sysmodule启动，通过Tesla选择是否开启sigpatch，这样就能玩破解游戏了。
 
-cfw(emunand)：虚拟系统破解状态，Hekate的FSS0引导，可以破解游戏
+所以这种三件套（也可以说四件套）=atmosphere+hekate+sys-patch+tesla，Tesla用于调用sys-patch的菜单。
 
-ofw(sysnand)：真实系统不破状态，Hekate的FSS0引导，可以正版联机
+https://www.tekqart.com/thread-382597-1-1.html
 
-cfw(auto)：大气层原版Fusee引导，根据emummc.ini自动识别真实和虚拟系统
+（3）大神编译大气层1.7.0的核心文件，atmosphere/package3，atmosphere/stratosphere.romfs，可以把loader patch限制去掉，还可以把sigpatch的fs补丁内置，payload引导fusee.bin是不需要编译的。
 
-点击more configs，根据选择进入
+https://www.tekqart.com/thread-382514-1-1.html
 
-Lakka-Erista，是AK大气层原来设定的旧lakka模拟器。它只支持软破或补丁机，但能兼容exfat格式的sd卡
+以上三种方法没区别，用哪种结果都一样，但是第一种作为以前的延续，使用起来相对简单些，也就是AK一直以来发布的可覆盖的大气层三件套文件
 
-Lakka-l4t：是新的lakka模拟器，兼容mariko/oled，目前新lakka只能支持fat32格式的sd卡
+https://www.tekqart.com/thread-321617-1-1.html
 
-ubuntu-l4t：是新的ubuntu系统，兼容mariko/oled，目前新ubuntu只能支持fat32格式的sd卡
-
-lockpick_rcm：主机Keys提取软件
-
-CommonProblemResolver：主机启动修复软件
-
-TegraExplorer：主机文件管理软件
-
-<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK_ATM_1.5.1_0329.jpg?raw=true" align="center" width="80%" />
+可以覆盖，只是在Hekate_ipl.ini里不选择fusee引导（cfw auto），也是作为1.7.0大气层之后的解决玩破解游戏的方法。
