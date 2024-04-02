@@ -7,3 +7,5 @@
 由于atmosphere-1.7.0开始，作者删除KIP的功能会影响FS补丁的加载，极限超频的loader.kip等一系列问题。也就是sigpatch签名补丁失效，不能玩破解游戏，但是这仅限于fusee引导（大气层-自动识别），所以atmosphere/kip_patches可有可无。通过Hekate的fss0引导的真实（破解）系统，虚拟（破解）系统的KIP是通过bootloader/patches.ini实现，所以不受大气层1.7.0升级导致不能玩破解游戏的影响。
 
 AK_ATM_1.7.0_0402.7z是AK原版大气层1.7.0个人整合包0402版
+
+<img src="https://github.com/AK478BB/AK-Atmosphere/raw/branch/main/AK_ATM_1.5.1_0329.jpg">
