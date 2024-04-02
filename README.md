@@ -8,4 +8,4 @@
 
 AK_ATM_1.7.0_0402.7z是AK原版大气层1.7.0个人整合包0402版
 
-<img src="https://github.com/AK478BB/AK-Atmosphere/raw/branch/main/AK_ATM_1.5.1_0329.jpg">
+<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK_ATM_1.5.1_0329.jpg">
