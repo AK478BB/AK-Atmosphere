@@ -1,10 +1,10 @@
-# AK原版大气层1.7.1个人整合包（2024.6.13）
+# AK原版大气层1.7.1个人整合包（2024.6.15）
 
-（1）和0603版相比，0613版更新Atmosphere1.7.1，Hekate6.2.0汉化，Sigpatch，最高支持switch18.1.0系统，更新ovlEdiZon--v1.0.8，MissionControl-0.11.1，ldn_mitm--v18.1.0，FPSLocker锁帧补丁，18.1.0系统主题所需的systemPatches补丁。更新极限超频EOS1.3.0。
+（1）和0613版相比，0615版更新Hekate6.2.0v4汉化，更新FPSLocker锁帧补丁。
 
 因为是原版atmosphere，所以大气层-自动识别fusee引导不支持sigpatch，不能玩破解游戏，可以等大佬编译大气层1.7.1内置sigpatch后再替换，暂时屏蔽Fusee引导的启动项。
 
-AK_ATM_1.7.1_0613.7z是AK原版大气层1.7.1个人整合包0613版
+AK_ATM_1.7.1_0615.7z是AK原版大气层1.7.1个人整合包0615版
 
 AK从0425版开始，对整合包内容进行分类
 
