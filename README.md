@@ -1,14 +1,14 @@
-# AK原版大气层1.7.1个人整合包（2024.6.15）
+# AK原版大气层1.7.1个人整合包（2024.6.16）
 
-（1）和0613版相比，0615版更新Hekate6.2.0v4汉化，更新FPSLocker锁帧补丁。
+（1）和0615版相比，0616版更新更新lsp199308编译的atmosphere-1.7.1-master-e85bc4db0-dirty，sigpatch已内置，更新FPSLocker锁帧补丁，更新极限超频EOS1.3.1。
 
-因为是原版atmosphere，所以大气层-自动识别fusee引导不支持sigpatch，不能玩破解游戏，可以等大佬编译大气层1.7.1内置sigpatch后再替换，暂时屏蔽Fusee引导的启动项。
+替换lsp199308编译的atmosphere/package3，atmosphere/stratosphere.romfs，bootloader/payloads/fusee.bin这三个文件即可。这样大气层自动识别也能正常玩破解游戏不受影响，AK大气层整合包的Hekate_ipl.ini启动设置将重新显示大气层自动识别（fusee引导）。
 
-AK_ATM_1.7.1_0615.7z是AK原版大气层1.7.1个人整合包0615版
+AK_ATM_1.7.1_0616.7z是AK原版大气层1.7.1个人整合包0616版
 
 AK从0425版开始，对整合包内容进行分类
 
-00基本包--AK大气层1.7.1无Tesla整合版
+00基本包--AK大气层无Tesla整合版
 
 内容：大气层三件套基本组件+相册NRO插件（有金手指edizon.nro插件），可独立使用，满足标准需求。
 
