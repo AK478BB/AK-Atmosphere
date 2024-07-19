@@ -1,13 +1,22 @@
-AK原版大气层1.6.2个人整合包（2024.2.9）
+AK原版大气层1.7.1个人整合包（2024.7.19）
 
 【00—此次版本更新的特别说明】
-（1）和0202版相比，0209版更新游戏锁帧插件FPSLocker.ovl--v1.2.7和FPSLocker-Warehouse的补丁，如当前正在用AK原版大气层1.5.5（1002版）或以后的个人整合包的，且没加过其它插件的，直接覆盖新版AK大气层整合包。
-AK_ATM_1.6.2_0209.7z是AK原版大气层1.6.2个人整合包0209版
-（2）从AK原版大气层1.6.2个人整合包1216版开始，AK将新增加一些非必须或占系统较多资源的插件以叠加包的方式分享，叠加分享方式适合玩家自行DIY，未来AK也会从大气层整合包里逐步将一些非必须的插件移出来，等于整合包的精简，这样有效提升大气层整合包的稳定性，但是叠加包的插件并不会实时更新，如果大家要追新版本，请根据叠加包自带文本内容在Github等网站地址下最新的文件替换。
-AK原版大气层1.6.2个人整合包0209版的叠加包
-叠加包01--AK极限超频插件20231112更新
-叠加包02--AK游戏锁帧插件20240209更新
-叠加包序号不存在任何先后顺序，也是向下兼容，你可以近似认为类似游戏DLC，可有可无，可先可后。但是和游戏不一样，大气层的插件越多，系统越不稳定，越不流畅。
+（1）和0704版相比，0719版更新TegraExplorer--v4.2.0，有线手柄插件sys-con--v1.2.2-b6d4af0，Haku33--v7.1，JKSV--07.18.2024和wiliwili--v1.4.1，FPSLocker锁帧补丁。更新极限超频插件EOS1.3.3-OC-Suite。
+AK_ATM_1.7.1_0719.7z是AK原版大气层1.7.1个人整合包0719版
+AK从0425版开始，对整合包内容进行分类
+00基本包--AK大气层无Tesla整合版
+内容：大气层三件套基本组件+相册NRO插件（有金手指edizon.nro插件），可独立使用，满足标准需求。
+01叠加包--AK原版Tesla插件包
+内容：原版Tesla核心组件+金手指+超频+底座+蓝牙手柄+锁帧+模拟Amiibo+联网等插件
+02替换包--AK极限超频插件
+内容：极限超频插件EOS，支持最新SW系统，非续航主机不适合极限超频。
+（2）升级说明
+如果首次想替换成无Tesla版的00基本包，需要保留nintendo和emummc后删除其它，再覆盖00基本包，以后更新是可以覆盖升级。
+如果这次更新是想继续使用Tesla插件（和AK上一版的大气层一样）请先覆盖00基本包，再覆盖01叠加包。
+00基本包是必须的，因为没有Tesla插件和sysmodule启动器，所以无Tesla版的大气层整合包非常稳定，玩游戏不会报错，如果你连主题也不安装，系统会更加稳定，无Tesla插件的大气层整合包等同大气层纯净包。
+01叠加包是可用可不用，可以覆盖到00基本包，也可以给其它类似的大气层三件套纯净包使用，除了Tesla-Menu外，为避免冲突，其余插件禁止自启动，启动其它sysmodule，第一次要去Deepsea工具箱启动。
+02替换包只能替换到01的Tesla插件包中且是给AK大气层整合包使用，替换里面的普通超频插件，只建议续航和OLED极限超频，并不推荐非续航和Lite极限超频，极限超频有损坏硬件不可逆的风险。
+00基本包和01叠加包之间有两个文件重叠：edizon.nro和DeepSeaToolbox.nro
 （3）AK在整合大气层的时候也一直会使用英文插件，但不影响大家随时删除和替换其他人发布的各种特斯拉中文版、终极版等插件整合包，替换方法很简单，删除AK大气层整合包里的Atmosphere/contents/，config/，Switch/.overlays/和saltysd这四个文件夹后，把别人发布的特斯拉插件包直接覆盖上去就好了。
 missioncontrol插件在Atmosphere/exefs_patches/有bluetooth_patches/和btm_patches/两个补丁文件夹，不需要missioncontrol的也可以删除。Emuiibo/是emuiibo插件的文件夹，Saltysd是ReverseNX插件的文件夹，如果发现相册里的NRO插件重复，可以看教程：手把手教你管理相册的NRO插件，删除不需要的文件。
 特斯拉ovl的插件有contents/启动文件，所以删除确实没有相册nro插件那容易管理，需要删除对应的旧文件，可下Beyondcompare软件进行比较。
@@ -18,29 +27,29 @@ missioncontrol插件在Atmosphere/exefs_patches/有bluetooth_patches/和btm_patc
 看教程：手把手教你更新大气层文件和升级系统
 
 【01—AK大气层下载地址】
-https://pan.baidu.com/s/1t7kvfTKvSZAOMgR6yZM3hA
-提取码avmd
-https://pan.baidu.com/s/1ceYgPpBlmNGntuY3Xu55xg?pwd=fvsu
+https://pan.baidu.com/s/1ZXq-AQhGAOtLOJIOZyKYRw?pwd=tpz6
 https://github.com/AK478BB/AK-Atmosphere/releases
-https://codeberg.org/AK478BB/AK-Atmosphere/releases
+https://codeberg.org/AK478/AK-Atmosphere/releases
 
 【02—AK大气层三件套信息】
-最高支持switch17.0.1系统，正版破解游戏都能玩了。
-（1）atmosphere-1.6.2-master-f7bf379cf+hbl-2.4.4+hbmenu-3.6.0
-https://github.com/Atmosphere-NX/Atmosphere
-（2）hekate_ctcaer_6.0.7_Nyx_1.5.6
-https://github.com/CTCaer/hekate
-“Bootloader/sys/nyx.bin备份”是英文原版文件，可以还原英文原版Hekate6.0.7
+最高支持switch18.1.0系统，正版破解游戏都能玩了。
+（1）atmosphere-1.7.1-master-e85bc4db0-dirty+hbl-2.4.4+hbmenu-3.6.0
+https://github.com/Atmosphere-NX/Atmosphere/releases
+https://www.tekqart.com/thread-382514-1-1.html
+（2）hekate_ctcaer_6.2.1_Nyx_1.6.3
+https://github.com/CTCaer/hekate/releases
+“Bootloader/sys/nyx.bin备份”是英文原版文件，可以还原英文原版Hekate6.2.1
 以下两位大佬分别分享的汉化nyx.bin文件，任选一个nyx.bin文件覆盖bootloader/sys/
 https://github.com/easyworld/hekate/releases
 https://www.tekqart.com/thread-222735-1-1.html
-（3）Sigpatches for Atmosphere 1.6.2（最高支持SW17.0.1系统）
+（3）Sigpatches for Atmosphere 1.7.1（最高支持SW18.1.0系统）
 有多个渠道可以下载签名补丁sigpatch
 https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/
 https://hackintendo.com/download/sigpatches/
 https://github.com/fraxalotl/SwitchScript
 签名补丁的制作工具IPS_Patch_Creator
 https://github.com/mrdude2478/IPS_Patch_Creator/releases
+https://disk.yandex.com/d/LEKGKbfDw-_pjA
 在atmosphere/contents启动的sys-patch插件也可以替代以上那种IPS格式的签名补丁。
 https://github.com/ITotalJustice/sys-patch/releases
 
@@ -53,7 +62,7 @@ https://github.com/ITotalJustice/sys-patch/releases
 cfw(sysnand)：真实系统破解状态，Hekate的FSS0引导，可以正版修改
 cfw(emunand)：虚拟系统破解状态，Hekate的FSS0引导，可以破解游戏
 ofw(sysnand)：真实系统不破状态，Hekate的FSS0引导，可以正版联机
-cfw(auto)：大气层原版Fusee引导，根据emummc.ini自动识别真实和虚拟系统
+cfw(auto)：大气层原版Fusee引导，根据emummc.ini自动识别真实和虚拟系统，大气层1.7.0开始不支持kip加载
 点击more configs，根据选择进入
 Lakka-Erista，是AK大气层原来设定的旧lakka模拟器。它只支持软破或补丁机，但能兼容exfat格式的sd卡
 Lakka-l4t：是新的lakka模拟器，兼容mariko/oled，目前新lakka只能支持fat32格式的sd卡
@@ -116,23 +125,24 @@ https://github.com/WerWolv/Tesla-Menu/releases
 （3）ovlSysmodules--v1.3.1
 Tesla系统管理
 https://github.com/WerWolv/ovl-sysmodules/releases
-（4）ovlEdiZon--v1.0.7
+（4）ovlEdiZon--v1.0.8
 金手指游戏修改
 https://github.com/proferabg/EdiZon-Overlay/releases
-（5）Status-Monitor-Overlay--v1.0.3a
+（5）Status-Monitor-Overlay--v1.0.4
 系统状态监视
 https://github.com/masagrator/Status-Monitor-Overlay/releases
 （6）sys-clk--v2.0.0_a（取消GPU限制）
 超频插件
 https://github.com/jope82/sys-clk-uncapped-gpu-and-other-extras/releases
-（7）MissionControl-0.10.0-master-38c9879
+（7）MissionControl-0.11.1-master-581ae0d
 蓝牙手柄插件
 https://github.com/ndeadly/MissionControl/releases
-（8）sys-con--v0.6.4
+（8）sys-con--v1.2.2-b6d4af0
 有线手柄插件
+https://github.com/o0Zz/sys-con/releases
 https://github.com/cathery/sys-con/releases
 （9）ReverseNX-RT--v2.0.0
-底座手持转换插件，包含SaltyNX--v0.7.1、ReverseNX-Tool.nro--v3.1.3和FPSLocker.ovl--v1.2.7
+底座手持转换插件，包含SaltyNX--v0.8.1、ReverseNX-Tool.nro--v3.1.3和FPSLocker.ovl--v2.0.0
 https://github.com/masagrator/ReverseNX-RT/releases
 https://github.com/masagrator/SaltyNX/releases
 https://github.com/masagrator/ReverseNX-Tool/releases
@@ -144,10 +154,9 @@ https://github.com/XorTroll/emuiibo/releases
 （11）fastCFWswitch--v1.3.1mod
 系统切换插件，也支持续航
 https://github.com/TTghostsemir/fastCFWswitch/releases
-（12）ldn_mitm--v17.0-148116e
+（12）ldn_mitm--v18.1.0
 破解游戏联机插件工具
-https://github.com/PewnyPL/ldn_mitm/releases
-https://github.com/spacemeowx2/ldn_mitm/releases
+https://github.com/DefenderOfHyrule/ldn_mitm/releases
 二、Nro插件列表
 （0）reboot_to_payload--v1.2
 一键关机重启工具，支持Switch全机型
@@ -188,14 +197,14 @@ https://github.com/mtheall/ftpd/releases
 （11）Goldleaf--v1.0.0
 文件管理工具
 https://github.com/XorTroll/Goldleaf/releases
-（12）Haku33--v6.2
+（12）Haku33--v7.1
 系统洗白工具，OLED可用
 https://github.com/StarDustCFW/Haku33/releases
 （13）HB appstore--v2.3.2
 破解软件商店，联网，前端进
 https://github.com/fortheusers/hb-appstore/releases
 https://apps.fortheusers.org/switch
-（14）JKSV--02.23.2023
+（14）JKSV--07.18.2024
 游戏存档管理工具
 https://github.com/J-D-K/JKSV/releases
 （15）linkalho--v2.0.1
@@ -216,7 +225,7 @@ https://github.com/DarkMatterCore/nxdumptool/releases
 （20）NXThemesInstaller--v2.7.1
 主题安装工具
 https://github.com/exelix11/SwitchThemeInjector/releases
-15.0.0-17.0.0系统需要systemPatches补丁
+15.0.0-18.1.0系统需要systemPatches补丁
 https://github.com/exelix11/theme-patches
 主题资源
 https://themezer.net/packs
@@ -229,10 +238,10 @@ https://github.com/3096/switch-time/releases
 （23）Tencent-switcher-GUI--v0.1.2
 国行和非国行系统切换工具
 https://github.com/CaiMiao/Tencent-switcher-GUI/releases
-（24）Tinfoil--v17.0v3
+（24）Tinfoil--v18.0v1
 黑商店，文件管理工具，自动安装前端
 http://tinfoil.io/Download#download
-（25）wiliwili--v1.3.0
+（25）wiliwili--v1.4.1
 哔哩哔哩播放器，联网，自选安装前端
 https://github.com/xfangfang/wiliwili/releases
 三、Payload插件
@@ -240,12 +249,11 @@ https://github.com/xfangfang/wiliwili/releases
 Hekate下删除主题和关闭插件自动启动，OLED可用
 进去1是关闭插件自启动，2是删除安装的主题，有效解决进不去HOS系统的故障
 https://github.com/zdm65477730/CommonProblemResolver/releases
-（2）Lockpick_RCM--v1.9.11
+（2）Lockpick_RCM--v1.9.12
 主机系统的密钥提取工具，OLED可用
 提取的prod.key在SD卡Switch/
-https://vps.suchmeme.nl/git/mudkip/Lockpick_RCM/releases
 https://github.com/Decscots/Lockpick_RCM/releases
-（3）TegraExplorer--v4.1.1
+（3）TegraExplorer--v4.2.0
 Hekate下的文件管理工具，OLED可用
 https://github.com/suchmememanyskill/TegraExplorer/releases
 有用的Tegraexplorer程序脚本
