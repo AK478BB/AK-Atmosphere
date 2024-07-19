@@ -1,5 +1,5 @@
-AK大气层整合包可精简组件说明（2023.11.28更新）
-以AK原版大气层1.6.2个人整合包1228版为例，
+AK大气层整合包可精简组件说明（2024.7.19更新）
+以AK原版大气层1.7.1个人整合包0719版为例，
 
 【精简说明】
 （1）大气层整合包除了atmosphere，hekate和sigpatch是三件套组件必备，其它所有的Tesla，ovl，nro等插件都是可有可无，少折腾插件，你的大气层就会非常的稳定和流畅，AK大气层整合包也可以随意的添加和精简各种插件，推荐看下面两个教程。
@@ -58,11 +58,14 @@ SD：atmosphere/exefs_patches/bluetooth_patches/
 SD：atmosphere/exefs_patches/btm_patches/
 SD：config/missioncontrol/
 （8）sys-con，有线手柄插件
+https://github.com/o0Zz/sys-con/releases
 https://github.com/cathery/sys-con/releases
 删除3个文件夹
 SD：atmosphere/contents/690000000000000D/
 SD：atmosphere/contents/690000000000000D_sys-con/（是个空文件夹，方便识别）
 SD：config/sys-con/
+删除1个文件
+SD：switch/sys-con.nro
 （9）ReverseNX-RT，底座手持转换插件，包含SaltyNX、ReverseNX-Tool.nro和FPSLocker.ovl
 https://github.com/masagrator/ReverseNX-RT/releases
 https://github.com/masagrator/SaltyNX/releases
@@ -99,6 +102,16 @@ SD：atmosphere/contents/4200000000000010_ldn_mitm/（是个空文件夹，方�
 SD：switch/ldnmitm_config/
 删除1个文件
 SD：switch/.overlays/7_ldnmitm_config.ovl
+（13）EOS-OC-Suite，极限超频插件
+删除4个文件夹
+SD：atmosphere/contents/00FF0000636C6BFF/
+SD：atmosphere/contents/00FF0000636C6BFF_sys-clk/（是个空文件夹，方便识别）
+SD：atmosphere/kips/
+SD：config/sys-clk/
+删除2个文件
+SD：switch/.overlays/2_sys-clk-overlay.ovl
+SD：switch/sys-clk-manager.nro
+修改bootloader/Hekate_ipl.ini，删除文本中的kip1=atmosphere/kips/loader.kip，修改后要保存Hekate_ipl.ini
 二、Nro插件列表
 （0）reboot_to_payload.nro，一键关机重启工具，支持Switch全机型
 源文件Safe_Reboot_Shutdown.nro，改名reboot_to_payload.nro，比大气层reboot_to_payload.nro好
