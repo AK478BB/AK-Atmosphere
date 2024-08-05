@@ -1,8 +1,8 @@
 # AK原版大气层1.7.1个人整合包（2024.7.19）
 
-（1）和0704版相比，0719版更新TegraExplorer--v4.2.0，有线手柄插件sys-con--v1.2.2-b6d4af0，Haku33--v7.1，JKSV--07.18.2024和wiliwili--v1.4.1，FPSLocker锁帧补丁。更新极限超频插件EOS1.3.3-OC-Suite。
+（1）和0719版相比，0805版更新Status-Monitor-Overlay--v1.1.0，SaltyNX--v0.9.0，FPSLocker锁帧补丁。更新极限超频插件EOS1.3.4-OC-Suite。
 
-AK_ATM_1.7.1_0719.7z是AK原版大气层1.7.1个人整合包0719版
+AK_ATM_1.7.1_0805.7z是AK原版大气层1.7.1个人整合包0805版
 
 AK从0425版开始，对整合包内容进行分类
 
