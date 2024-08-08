@@ -1,8 +1,8 @@
-# AK原版大气层1.7.1个人整合包（2024.7.19）
+# AK原版大气层1.7.1个人整合包（2024.8.8）
 
-（1）和0719版相比，0805版更新Status-Monitor-Overlay--v1.1.0，SaltyNX--v0.9.0，FPSLocker锁帧补丁。更新极限超频插件EOS1.3.4-OC-Suite。
+（1）和0805版相比，0808版更新Status-Monitor-Overlay--v1.1.2，SaltyNX--v0.9.2，JKSV--08.06.2024，nxdumptool--v2.0-c1b76fb-08.08.2024，FPSLocker锁帧补丁。
 
-AK_ATM_1.7.1_0805.7z是AK原版大气层1.7.1个人整合包0805版
+AK_ATM_1.7.1_0808.7z是AK原版大气层1.7.1个人整合包0808版
 
 AK从0425版开始，对整合包内容进行分类
 
