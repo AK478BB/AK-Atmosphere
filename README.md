@@ -1,8 +1,20 @@
-# AK原版大气层1.7.1个人整合包（2024.9.12）
+# AK原版大气层1.8.0个人整合包（2024.10.15）
 
-（1）和0824版相比，0912版更新Status-Monitor-Overlay--v1.1.3，sys-con--v1.4.1-2f38f88，Goldleaf--v1.0.0-2024.1.4，nxdumptool--v2.0-c1b76fb-09.12.2024和FPSLocker锁帧补丁，更新极限超频插件EOS-OC-Suite--v1.4.3
+（1）和0912版相比，1015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.0系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
 
-AK_ATM_1.7.1_0912.7z是AK原版大气层1.7.1个人整合包0912版
+以上所有文件都是同文件名，同SD卡路径的升级，所以可相应的覆盖升级。
+
+目前还有部分atmosphere/contents的sysmodule启动插件尚未支持19.0.0系统，在deepsea工具箱或Hekate关闭这些插件自启动就可以正常进入19.0.0的真实破解系统或者虚拟系统。教程：手把手教你在Hekate删除主题和关闭插件启动。
+
+010000000000bd00_missioncontrol
+
+690000000000000D_sys-con
+
+4200000000000010_ldn_mitm
+
+极限超频的loader.kip未兼容大气层1.8.0，建议删除atmosphere/kips/loader.kip文件并在bootloader/hekate_ipl.ini中删除“kip1=atmosphere/kips/loader.kip”。
+
+AK_ATM_1.8.0_1015.7z是AK原版大气层1.8.0个人整合包1015版
 
 AK从0425版开始，对整合包内容进行分类
 
