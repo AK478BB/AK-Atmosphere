@@ -12,6 +12,10 @@
 
 解决办法3：如果你用的加速器需要在主机上设置代理服务器IP，那90dns失效，可在真实破解系统联任天堂服务器。
 
+2024.10.16下午：由于替换fusee.bin（gbatemp论坛发布的fusee.bin，非lsp大佬解除的loader patch），所以AK打包补丁的时候漏了大气层自动识别（fusee引导）的loader patch。一个ips文件。但是对fss0引导的真实破解系统或虚拟系统则不受影响，因为那个fs/loader在bootloader/patches.ini中已经有了。
+SD：atmosphere/kip_patches/loader_patches/D3FD950603AECC4DAB248F29803081129F9C1346AD02BEB67CAC9C58A0A333D3.ips
+所以更新这个AK_ATM_1.8.0_1015-fix1016v2，只要覆盖就可以了。
+
 （1）和0912版相比，1015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.0系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
 
 以上所有文件都是同文件名，同SD卡路径的升级，所以可相应的覆盖升级。
