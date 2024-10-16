@@ -1,4 +1,16 @@
-# AK原版大气层1.8.0个人整合包（2024.10.15）
+# AK原版大气层1.8.0个人整合包（2024.10.16fix）
+
+2024.10.16反馈bug：因为lsp199308大佬编译的问题，可能导致内置的90dns无法解除，如果你平时只是玩虚拟系统，或者只进真实（正版）系统玩联机的双系统用户，你根本无需理会这个bug，不影响你正常联网wifi。
+
+如果你需要在真实（破解）系统，或者通过大气层自动识别进真实系统，需要连任天堂服务器对战，比如超频或金手指，解决办法如下。
+
+解决办法1：已经反馈bug给lsp199308大佬，等大佬修复bug。
+
+解决办法2：解压缩AK_ATM_1.8.0_1015-fix1016，覆盖到SD卡就可以了。
+
+这个AK_ATM_1.8.0_1015-fix1016其实和AK之前第二版大气层1.8.0三件套一样，只要删旧的hbmenu.nsp前端后再覆盖。
+
+解决办法3：如果你用的加速器需要在主机上设置代理服务器IP，那90dns失效，可在真实破解系统联任天堂服务器。
 
 （1）和0912版相比，1015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.0系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
 
