@@ -1,14 +1,16 @@
-# AK原版大气层1.8.0个人整合包（2024.10.19）
+# AK原版大气层1.8.0个人整合包（2024.10.21）
 
 【00—此次版本更新的特别说明】
 
 （1）和AK原版大气层1.7.1相比。
 
-（1.1）1019版更新nx-ovlloader--v1.0.9+，MissionControl-0.12.0，sys-con--v1.4.2，ldn_mitm--v1.18.0，至此整合包里自带的sysmodule启动插件全部支持19.0.0系统。更新FPSLocker锁帧补丁。
+（1.1）1021版更新大气层1.8.0三件套第五版（大气层三件套中的sigpatch新增nim patch补丁，功能见【AK杂谈】手把手教你了解大气层sigpatch签名补丁），更新ultrahand--v1.7.9，sys-con--v1.4.3-0682ed5，替换普通超频为EOS1.5.0，改02替换包为普通超频变极限超频的loader.kip和hekate_ipl.ini。
 
-（1.2）1016版更新atmosphere-1.8.0-prerelease-c6014b533，更新此版大气层的loader patch（同时支持fusee引导的ips和fss0引导的patches.ini），fusee.bin（gbatemp论坛编译版，支持fusee引导的fs/loader的ips补丁），更新FPSLocker锁帧补丁。更新极限超频EOS-OC-Suite--v1.5.0，支持19.0.0系统。
+（1.2）1019版更新nx-ovlloader--v1.0.9+，MissionControl-0.12.0，sys-con--v1.4.2，ldn_mitm--v1.18.0，至此整合包里自带的sysmodule启动插件全部支持19.0.0系统。更新FPSLocker锁帧补丁。
 
-（1.3）1015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.0系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
+（1.3）1016版更新atmosphere-1.8.0-prerelease-c6014b533，更新此版大气层的loader patch（同时支持fusee引导的ips和fss0引导的patches.ini），fusee.bin（gbatemp论坛编译版，支持fusee引导的fs/loader的ips补丁），更新FPSLocker锁帧补丁。更新极限超频EOS-OC-Suite--v1.5.0，支持19.0.0系统。
+
+（1.4）1015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.0系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
 
 以上所有文件都是同文件名，同SD卡路径的升级，所以可相应的覆盖升级。
 
