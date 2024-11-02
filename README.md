@@ -1,8 +1,10 @@
-# AK原版大气层1.8.0个人整合包（2024.10.28）
+# AK原版大气层1.8.0个人整合包（2024.11.3）
 
 【00—此次版本更新的特别说明】
 
 （1）和AK原版大气层1.7.1相比。
+
+（1.6）1103版更新ultrahand--v1.8.1，SaltyNX--v1.0.0、ReverseNX-Tool.nro--v3.2.0，更新FPSLocker锁帧补丁。
 
 （1.5）1028版更新ultrahand--v1.8.0，Status-Monitor-Overlay--v1.1.4+，SaltyNX--v0.10.0，wiliwili--v1.5.0，更新FPSLocker锁帧补丁。
 
