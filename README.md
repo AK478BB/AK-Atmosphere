@@ -1,8 +1,10 @@
-# AK原版大气层1.8.0个人整合包（2024.11.25）
+# AK原版大气层1.8.0个人整合包（2024.12.27）
 
-AK_ATM_1.8.0_1125.7z是AK原版大气层1.8.0个人整合包1125版
+AK_ATM_1.8.0_1227.7z是AK原版大气层1.8.0个人整合包1227版
 
 （1）和AK原版大气层1.7.1相比。
+
+（1.12）1227版更新Status-Monitor-Overlay--v1.1.7a，SaltyNX--v1.2.0，FPSLocker.ovl--v2.1.0，Tinfoil--v19.0v1的自动安装前端版，更新FPSLocker锁帧补丁。
 
 （1.11）1125版更新ReverseNX-RT--v2.1.0，SaltyNX--v1.1.1，NX-Activity-Log--v1.5.4，更新FPSLocker锁帧补丁。
 
