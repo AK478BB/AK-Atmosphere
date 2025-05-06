@@ -1,69 +1,24 @@
-# AK原版大气层1.8.0个人整合包（2025.04.16）
+# 【AK杂谈】SW国行系统不可强刷20.0以上，会有2162-0002变砖出错
+因为考虑到国行Switch1肯定永久停留在19.0.1，那么AK想到很多小伙伴的国行硬破的虚拟系统可能直接使用国行系统，以后等大气层三件套更新适配也可以通过daybreak离线升级到20.0.0+的系统，考虑到国行系统离线升级强刷可能存在的问题，AK特地测试了国行虚拟系统。
+结果很悲催：新做好的19.0.1虚拟系统转成国行系统后，daybreak升级20.0.1，
+出错代码：2162-0002（0x4a2）
+程序：0100000000001000
+系统固件：20.0.1（大气层1.9.0）
 
-AK_ATM_1.8.0_20250416.7z是AK原版大气层1.8.0个人整合包20250416版
+但是同样全球系统19.0.1，daybreak升级到20.0.1没问题，和两位朋友联系帮忙在非续航，国行的主机上测试，他们反馈得到了同样的结果。
+假如是全球系统20.0.0或20.0.1，通过相册插件tencent-switcher-gui.nro改成“国行系统”以后重启，一样卡在这个错误无法解决。
+因为测试是在虚拟系统，而且还是文件格式的SD01，所以测试后，他们可以把这个SD01的虚拟系统删除，对主机没有任何的影响，也不影响他们SD00里的虚拟系统。
 
-（1）和AK原版大气层1.7.1相比。
+AK提醒：所有国行Switch破解双系统的小伙伴们，请尽快把你国行主机上的虚拟系统，从“国行系统”改“全球系统”，相册里有插件tencent-switcher-gui.nro，一键切换虚拟系统变成全球系统，不要尝试daybreak升级国行的虚拟系统到20.0.0或以上，等切换变成全球系统以后才可以daybreak升级。
+如果是单系统破解的小伙伴，想必已经是BAN机了吧，要么做个虚拟系统，要么把真实系统也像虚拟系统一样，改“全球系统”，然后才能升级。
 
-（1.15）20250416版更新Checkpoint--v3.9.0，NX-Activity-Log--v1.5.6，更新FPSLocker锁帧补丁。
+# 【AK杂谈】可能Switch1的国行主机将永久停留在19.0.1系统
+AK手里没有国行机，五一时遇到一位朋友玩国行正版马车8的联机，是双系统的，AK提醒有20.0.0的更新，大气层目前还未适配，但是直到全球Switch都升级20.0.1了，国行Switch1好像还是19.0.1没有推送更新，AK还以为是不是国服延迟更新，但是SW系统升级固件应该是统一分发，各区的eshop商城服务器作为节点提高升级速度，所以想想也不太可能因为国服延迟更新，AK特地去Switchbrew查了查20.0.0固件信息。
+感谢作者后显示的内容
+https://switchbrew.org/wiki/20.0.0
+好家伙，原来Switch20.0.0的系统文件已经移除国行的相关模块，看来20.0.0系统可能因为虚拟游戏卡，分享Switch2等方面的考虑，觉得系统开发如果还要兼容Switch1国行的主机，可能也会非常麻烦，而且毫无意义，毕竟2026年5月关闭国服了。
 
-（1.14）20250317版更新Status-Monitor-Overlay--v1.1.6+，sys-con--v1.5.1-5b301fa，wiliwili--v1.5.1，更新FPSLocker锁帧补丁。
 
-（1.13）20250129版更新EOS-OC-Suite--v1.5.1，sys-con--v1.5.0-0d95661，AtmoXL-Titel-Installer--v1.8.2，nxdumptool--v2.0-12.28.2024，更新FPSLocker锁帧补丁。
 
-（1.12）20241227版更新Status-Monitor-Overlay--v1.1.7a，SaltyNX--v1.2.0，FPSLocker.ovl--v2.1.0，Tinfoil--v19.0v1的自动安装前端版，更新FPSLocker锁帧补丁。
-
-（1.11）20241125版更新ReverseNX-RT--v2.1.0，SaltyNX--v1.1.1，NX-Activity-Log--v1.5.4，更新FPSLocker锁帧补丁。
-
-（1.10）20241117版更新SaltyNX--v1.0.6，ftpd--v3.2.1，NX-Activity-Log--v1.5.2，更新FPSLocker锁帧补丁。
-
-（1.09）20241111版更新ovlSysmodules--v1.3.2，SaltyNX--v1.0.5，NX-Activity-Log--v1.5.1，更新FPSLocker锁帧补丁。
-
-（1.08）20241107版更新ultrahand--v1.8.2，Status-Monitor-Overlay--v1.1.6+，SaltyNX--v1.0.3，JKSV--11.05.2024，更新FPSLocker锁帧补丁。
-
-（1.07）20241105版更新Status-Monitor-Overlay--v1.1.5+，SaltyNX--v1.0.2，linkalho--v2.0.1-2a980d69，NX-Activity-Log--v1.5.0-hos19.0.0，nxdumptool--v2.0-c1b76fb-11.3.2024，更新FPSLocker锁帧补丁。
-
-（1.06）20241103版更新ultrahand--v1.8.1，SaltyNX--v1.0.0、ReverseNX-Tool.nro--v3.2.0，更新FPSLocker锁帧补丁。
-
-（1.05）20241028版更新ultrahand--v1.8.0，Status-Monitor-Overlay--v1.1.4+，SaltyNX--v0.10.0，wiliwili--v1.5.0，更新FPSLocker锁帧补丁。
-
-（1.04）20241021版更新大气层1.8.0三件套第五版（大气层三件套中的sigpatch新增nim patch补丁，功能见【AK杂谈】手把手教你了解大气层sigpatch签名补丁），更新ultrahand--v1.7.9，sys-con--v1.4.3-0682ed5，替换普通超频为EOS1.5.0，改02替换包为普通超频变极限超频的loader.kip和hekate_ipl.ini。
-
-（1.03）20241019版更新nx-ovlloader--v1.0.9+，MissionControl-0.12.0，sys-con--v1.4.2，ldn_mitm--v1.18.0，至此整合包里自带的sysmodule启动插件全部支持19.0.1系统。更新FPSLocker锁帧补丁。
-
-（1.02）20241016版更新atmosphere-1.8.0-prerelease-c6014b533，更新此版大气层的loader patch（同时支持fusee引导的ips和fss0引导的patches.ini），fusee.bin（gbatemp论坛编译版，支持fusee引导的fs/loader的ips补丁），更新FPSLocker锁帧补丁。更新极限超频EOS-OC-Suite--v1.5.0，支持19.0.1系统。
-
-（1.01）20241015版更新lsp199308编译的atmosphere-1.8.0-prerelease-5717ea6c0，hekate_ctcaer_6.2.2_Nyx_1.6.4，最高支持19.0.1系统，从此版本开始：ultrahand同名平替了Tesla组件（nx-ovlloader--v1.0.8+，ultrahand--v1.7.8，ovlSysmodules--v1.3.1+），更新ovlEdiZon--v1.0.9，Status-Monitor-Overlay--v1.1.4，SaltyNX--v0.9.4，FPSLocker.ovl--v2.0.3和FPSLocker锁帧补丁。更新19.0.0系统需要的主题systemPatches补丁，nxdumptool--v2.0-c1b76fb-10.24.2024，更新前端hbmenu.nsp，更新tinfoil.nro的applet小程序版（checkpoint.nro，dbi.nro，tinfoil.nro和wiliwili.nro都可以在安装新的hbmenu.nsp进入前端模式）。更新Lockpick_RCM--v1.9.13。
-
-以上所有文件都是同文件名，同SD卡路径的升级，所以可相应的覆盖升级。
-
-AK从0425版开始，对整合包内容进行分类
-
-00基本包--AK大气层无Tesla整合版
-
-内容：大气层三件套基本组件+相册NRO插件（有金手指edizon.nro插件），可独立使用，满足标准需求。
-
-01叠加包--AK原版Tesla插件包
-
-内容：Tesla核心组件（从大气层1.8.0开始ultrahand平替）+金手指+超频+底座+蓝牙手柄+锁帧+模拟Amiibo+联网等插件
-
-02替换包--AK极限超频插件
-
-内容：极限超频插件EOS，支持最新SW系统，非续航主机不适合极限超频。
-
-（2）升级说明
-
-如果首次想替换成无Tesla版的00基本包，需要保留nintendo和emummc后删除其它，再覆盖00基本包，以后更新是可以覆盖升级。
-
-如果这次更新是想继续使用Tesla插件（和AK上一版的大气层一样）请先覆盖00基本包，再覆盖01叠加包。
-
-00基本包是必须的，因为没有Tesla插件和sysmodule启动器，所以无Tesla版的大气层整合包非常稳定，玩游戏不会报错，如果你连主题也不安装，系统会更加稳定，无Tesla插件的大气层整合包等同大气层纯净包。
-
-01叠加包是可用可不用，可以覆盖到00基本包，也可以给其它类似的大气层三件套纯净包使用，除了Tesla-Menu外，为避免冲突，其余插件禁止自启动，启动其它sysmodule，第一次要去Deepsea工具箱启动。
-
-02替换包只能替换到01的Tesla插件包中且是给AK大气层整合包使用，替换里面的普通超频插件，只建议续航和OLED极限超频，并不推荐非续航和Lite极限超频，极限超频有损坏硬件不可逆的风险。
-
-00基本包和01叠加包之间有两个文件重叠：edizon.nro和DeepSeaToolbox.nro
-
-（3）fpslocker可以刷高屏幕分辨率，极限超频的loader.kip可以突破超频上限，这两个是能够对主机硬件造成不可逆损伤的软件，和NS成熟的硬破改机完全两码事，AK不推荐新手启动这些功能。AK只是搬运这些插件，硬件造成不可逆损伤和AK无关。超频和极限超频真不是什么新鲜的玩意儿，从Switch破解就有了，超频一般是先拉高内存，再根据具体某个游戏，去动态调节GPU，CPU，再配合锁帧插件实现稳60帧，极限超频还需要降压调频工具，但不是每个游戏都能稳，所以超频确实没那么玄乎，但是的确对主机硬件不友好。
-
-<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/AK_ATM_1.5.1_0329.jpg">
+所以国行Switch主机的正版系统可能将永久停留在19.0.1系统，熔断永远=20。
+但是玩国行Switch主机的小伙伴也没必要担心，因为不影响你的虚拟系统等大气层三件套全部适配后再升级20.0.1玩最新的破解游戏。
