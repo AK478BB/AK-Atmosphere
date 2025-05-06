@@ -25,6 +25,8 @@ AK手里没有国行机，五一时遇到一位朋友玩国行正版马车8的�
 
 https://switchbrew.org/wiki/20.0.0
 
+<img src="https://github.com/AK478BB/AK-Atmosphere/blob/master/CHN19.0.1.jpg?raw=true" align="center" width="80%" />
+
 好家伙，原来Switch20.0.0的系统文件已经移除国行的相关模块，看来20.0.0系统可能因为虚拟游戏卡，分享Switch2等方面的考虑，觉得系统开发如果还要兼容Switch1国行的主机，可能也会非常麻烦，而且毫无意义，毕竟2026年5月关闭国服了。
 
 所以国行Switch主机的正版系统可能将永久停留在19.0.1系统，熔断永远=20。但是玩国行Switch主机的小伙伴也没必要担心，因为不影响你的虚拟系统等大气层三件套全部适配后再升级20.0.1玩最新的破解游戏。
