@@ -1,5 +1,5 @@
-AK大气层整合包可精简组件说明（2024.10.19更新）
-以AK原版大气层1.8.0个人整合包1019版为例，
+AK大气层整合包可精简组件说明（2025.5.9更新）
+以AK原版大气层1.9.0个人整合包0509版为例，
 
 【精简说明】
 （1）大气层整合包除了atmosphere，hekate和sigpatch是三件套组件必备，其它所有的Tesla，ovl，nro等插件都是可有可无，少折腾插件，你的大气层就会非常的稳定和流畅，AK大气层整合包也可以随意的添加和精简各种插件，推荐看下面两个教程。
@@ -62,6 +62,7 @@ SD：atmosphere/contents/010000000000bd00/
 SD：atmosphere/contents/010000000000bd00_missioncontrol/（是个空文件夹，方便识别）
 SD：atmosphere/exefs_patches/bluetooth_patches/
 SD：atmosphere/exefs_patches/btm_patches/
+SD：atmosphere/exefs_patches/hid_patches/
 SD：config/missioncontrol/
 （8）sys-con，有线手柄插件
 https://github.com/o0Zz/sys-con/releases
@@ -101,7 +102,7 @@ SD：config/fastCFWSwitch/
 删除1个文件
 SD：switch/.overlays/5_fastcfwswitch.ovl
 （12）ldn_mitm，破解游戏联机插件工具
-https://github.com/spacemeowx2/ldn_mitm/releases
+https://github.com/DefenderOfHyrule/ldn_mitm/releases
 删除3个文件夹
 SD：atmosphere/contents/4200000000000010/
 SD：atmosphere/contents/4200000000000010_ldn_mitm/（是个空文件夹，方便识别）
@@ -134,7 +135,7 @@ https://github.com/HamletDuFromage/aio-switch-updater/releases
 删除1个文件夹
 SD：switch/aio-switch-updater/
 （3）AtmoXL-Titel-Installer，游戏安装工具，前端进
-https://github.com/dezem/AtmoXL-Titel-Installer/releases
+https://github.com/R-YaTian/AtmoXL-Titel-Installer/releases
 删除1个文件夹
 SD：switch/AtmoXL-Titel-Installer
 （4）Awoo-Installer，游戏安装工具，前端进
@@ -242,8 +243,7 @@ https://github.com/zdm65477730/CommonProblemResolver/releases
 （2）Lockpick_RCM
 主机系统的密钥提取工具，OLED可用
 提取的prod.key在SD卡Switch/
-https://vps.suchmeme.nl/git/mudkip/Lockpick_RCM/releases
-https://github.com/Decscots/Lockpick_RCM/releases
+https://github.com/impeeza/Lockpick_RCMDecScots/releases
 （3）TegraExplorer
 Hekate下的文件管理工具，OLED可用
 https://github.com/suchmememanyskill/TegraExplorer/releases
