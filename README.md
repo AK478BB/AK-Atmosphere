@@ -1,14 +1,18 @@
-2025.5.8，第四版大气层1.9.0测试版三件套发布，更新lsp199308编译的atmosphere-1.9.0-20_support-9dd8269f7-dirty，sigpatch已内置（ES，FS，LOADER，NIM，NIFM内置），替换atmosphere/package3，atmosphere/stratosphere.romfs，bootloader/payloads/fusee.bin这三个文件即可。这样大气层自动识别也能正常玩破解游戏不受影响。参考【AK杂谈】大气层1.7.0后sigpatch签名补丁的三种解决办法。
+# AK原版大气层1.9.0个人整合包（2025.05.09）
+
+（1）和AK原版大气层1.8.0相比。
+
+（1.01）20250509版更新三件套：lsp199308编译的atmosphere-1.9.0-20_support-9dd8269f7-dirty，sigpatch已内置，更新hekate_ctcaer_6.2.5-20.0.0_support_test英文，Lockpick_RCM--v1.9.15。更新Tesla：ovlmenu--v1.2.3（ultrahand--v1.8.3），ovlSysmodules--v1.3.3，Status-Monitor-Overlay--v1.1.8，MissionControl-0.13.0-develop-82e9574（多了hid_patches补丁），SaltyNX--v1.2.2，FPSLocker.ovl--v2.1.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.0-a20384d。更新nro：Checkpoint--v3.10.0，NX-Activity-Log--v1.5.7，nxdumptool--v2.0-05.09.2024，20.0.0系统需要systemPatches主题补丁。
 
 # 注意事项：
 
 （1）第四版大气层1.9.0测试版三件套全部支持Switch20.0.0/20.0.1，虚拟系统升级20.0.1也能玩破解游戏，但是只要你的Switch真实系统没升级20.0.0+，efuse熔断数依然是20或以下的，那就继续保持大气层1.8.0正式版，不用更新，虚拟系统也保持19.0.1不用升级。
 
-（2）国行的系统19.0.1必须通过tencent-switcher-gui.nro插件把系统转区成“全球系统”后才能离线升级20.0.0+系统，否则进系统会有2162-0002（0x4a2）变砖错误，尤其是真实系统变砖只能还原NAND备份。
+（2）国行系统止步19.0.1，如果低于等于19.0.1的国行系统必须通过tencent-switcher-gui.nro插件把系统转区成“全球系统”后才能离线升级20.0.0+系统，否则进系统会有2162-0002（0x4a2）变砖错误，尤其是真实系统变砖只能还原NAND备份。
 
 （3）已经升级了20.0.1的真实或虚拟系统都没必要降级19.0.1，daybreak降级后容易出现nim（0100000000000025）变砖错误，只能在出现Switch图标前按住音量+和-进SW恢复模式进行系统的初始化解决错误。
 
-（4）Switch20.0.0+的系统确实给自制系统的预留空间越来越少，所以atmosphere/contents/那里的sysmodule启动插件占后台的越少越好，虽然游戏txt的金手指不受影响，但romfs的游戏mod可能影响较大。相册里的nro插件问题不大，一致也建议nro插件以万能前端NSP的模式运行NRO插件。总之，少折腾插件，你的Switch系统会很稳定。
+（4）Switch20.0.0+的系统确实给自制系统的预留空间越来越少，所以atmosphere/contents/那里的sysmodule启动插件占后台的越少越好，虽然游戏txt的金手指不受影响，但romfs的游戏mod可能影响较大。相册里的nro插件问题不大，一般建议nro插件以万能前端NSP的模式运行NRO插件。总之，少折腾Tesla插件，你的Switch系统会很稳定，新手建议使用00基本包--AK大气层无Tesla整合版，不需要01叠加包--AK原版Tesla插件包。
 
 # 【AK杂谈】SW国行系统不可强刷20.0以上，会有2162-0002变砖出错
 
