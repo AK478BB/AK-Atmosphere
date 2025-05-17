@@ -1,3 +1,34 @@
+#【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
+
+感谢cccvivi的贴国行20.01救活了！AK大，昨天一直看你的贴子吓死我了，可以不用线刷修复强刷20.0.1的国行真实系统了
+
+https://www.tekqart.com/thread-420905-1-1.html
+
+感谢zdm65477730大佬编译的Tesla终极版套件，只需要Tesla基础的三件套就行了。
+
+Tesla插件列表
+
+（1）-（3）是特斯拉核心组件，也叫特斯拉基础包
+
+（1）nx-ovlloader，Tesla启动器
+
+https://github.com/zdm65477730/nx-ovlloader/releases
+
+（2）ovlmenu，Tesla菜单
+
+https://github.com/zdm65477730/Tesla-Menu/releases
+
+（3）ovlSysmodules，Tesla系统管理
+
+https://github.com/zdm65477730/ovl-sysmodules/releases
+
+对于国行系统强刷20.0.1导致的2162-0002变砖出错，可以通过zdm65477730大佬编译的Tesla终极版套件中的带转区功能的系统模组“ovl-sysmodules.ovl“，实现在出现Switch图标的时候快速打开Tesla菜单，进入系统模组，按Y键实现实时转区。因为时间很短，只有一两秒，所以不仅要手速，而且还要设置Tesla插件的快捷键，让ovlmenu只能显示系统模组ovl-sysmodule，而且要屏蔽ovl-sysmodules里除了转区之外的其它功能。
+
+AK进行了实验，需要做纯净的tesla三件套，ovlloader，ovlmenu和ovlsysmodules , Tesla快捷键设定L，ovlsysmodules里面只能显示转区功能。**
+
+# 操作方法：开机进破解系统，在出现大气层三角形图标后拼命按L，一旦出现tesla菜单的系统模块，马上按A，然后按Y切换到国际，这样就能顺利进入系统了。如果失败了重启再进入。
+
+
 # AK原版大气层1.9.0个人整合包（2025.05.09）
 
 （1）和AK原版大气层1.8.0相比。
