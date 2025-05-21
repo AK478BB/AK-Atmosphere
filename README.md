@@ -1,3 +1,9 @@
+# AK原版大气层1.9.0个人整合包（2025.05.21）
+
+（1.02）20250521版更新hekate_ctcaer_6.3.0_Nyx_1.7.0，hekate_ipl.ini设置略有变更，需要汉化hekate的小伙伴可以根据下面网址找到汉化作者，二选一覆盖nyx.bin到bootloader/sys/后重启生效。更新Goldleaf--v1.1.0，NXThemesInstaller--v2.8.0，更新MissionControl-0.13.1，sys-con--v1.5.2，SaltyNX--v1.2.4，FPSLocker.ovl--v2.1.2和FPSLocker锁帧补丁。更新极限超频EOS-OC-Suite--v1.6.0因和sigpatch存在冲突，所以在02的替换包里补充sys-patch插件用于替代sigpatch。
+
+（1.01）20250509版更新三件套：lsp199308编译的atmosphere-1.9.0-20_support-9dd8269f7-dirty，sigpatch已内置，更新hekate_ctcaer_6.2.5-20.0.0_support_test英文，Lockpick_RCM--v1.9.15。更新Tesla：ovlmenu--v1.2.3（ultrahand--v1.8.3），ovlSysmodules--v1.3.3，Status-Monitor-Overlay--v1.1.8，MissionControl-0.13.0-develop-82e9574（多了hid_patches补丁），SaltyNX--v1.2.2，FPSLocker.ovl--v2.1.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.0-a20384d。更新nro：Checkpoint--v3.10.0，NX-Activity-Log--v1.5.7，nxdumptool--v2.0-05.09.2024，20.0.0系统需要systemPatches主题补丁。
+
 # 【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
 
 感谢cccvivi的贴国行20.01救活了！AK大，昨天一直看你的贴子吓死我了，可以不用线刷修复强刷20.0.1的国行真实系统了
@@ -31,22 +37,6 @@ AK进行了实验，需要做纯净的tesla三件套，ovlloader，ovlmenu和ovl
 # 操作方法：开机进破解系统，在出现大气层三角形图标后拼命按L，一旦出现tesla菜单的系统模块，马上按A，然后按Y切换到国际，这样就能顺利进入系统了。如果失败了重启再进入。
 
 <img src="https://github.com/AK478BB/ATM-Instruction/blob/main/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E7%AE%A1%E7%90%86%E5%A4%A7%E6%B0%94%E5%B1%82tesla%E5%92%8Covl%E6%8F%92%E4%BB%B6.jpg?raw=true" align="center" width="80%" />
-
-# AK原版大气层1.9.0个人整合包（2025.05.09）
-
-（1）和AK原版大气层1.8.0相比。
-
-（1.01）20250509版更新三件套：lsp199308编译的atmosphere-1.9.0-20_support-9dd8269f7-dirty，sigpatch已内置，更新hekate_ctcaer_6.2.5-20.0.0_support_test英文，Lockpick_RCM--v1.9.15。更新Tesla：ovlmenu--v1.2.3（ultrahand--v1.8.3），ovlSysmodules--v1.3.3，Status-Monitor-Overlay--v1.1.8，MissionControl-0.13.0-develop-82e9574（多了hid_patches补丁），SaltyNX--v1.2.2，FPSLocker.ovl--v2.1.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.0-a20384d。更新nro：Checkpoint--v3.10.0，NX-Activity-Log--v1.5.7，nxdumptool--v2.0-05.09.2024，20.0.0系统需要systemPatches主题补丁。
-
-# 注意事项：
-
-（1）第四版大气层1.9.0测试版三件套全部支持Switch20.0.0/20.0.1，虚拟系统升级20.0.1也能玩破解游戏，但是只要你的Switch真实系统没升级20.0.0+，efuse熔断数依然是20或以下的，那就继续保持大气层1.8.0正式版，不用更新，虚拟系统也保持19.0.1不用升级。
-
-（2）国行系统止步19.0.1，如果低于等于19.0.1的国行系统必须通过tencent-switcher-gui.nro插件把系统转区成“全球系统”后才能离线升级20.0.0+系统，否则进系统会有2162-0002（0x4a2）变砖错误，尤其是真实系统变砖只能还原NAND备份。
-
-（3）已经升级了20.0.1的真实或虚拟系统都没必要降级19.0.1，daybreak降级后容易出现nim（0100000000000025）变砖错误，只能在出现Switch图标前按住音量+和-进SW恢复模式进行系统的初始化解决错误。
-
-（4）Switch20.0.0+的系统确实给自制系统的预留空间越来越少，所以atmosphere/contents/那里的sysmodule启动插件占后台的越少越好，虽然游戏txt的金手指不受影响，但romfs的游戏mod可能影响较大。相册里的nro插件问题不大，一般建议nro插件以万能前端NSP的模式运行NRO插件。总之，少折腾Tesla插件，你的Switch系统会很稳定，新手建议使用00基本包--AK大气层无Tesla整合版，不需要01叠加包--AK原版Tesla插件包。
 
 # 【AK杂谈】SW国行系统不可强刷20.0以上，会有2162-0002变砖出错
 
