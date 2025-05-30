@@ -1,8 +1,6 @@
-# AK原版大气层1.9.0个人整合包（2025.05.21）
+# AK原版大气层1.9.1个人整合包（2025.05.30）
 
-（1.02）20250521版更新hekate_ctcaer_6.3.0_Nyx_1.7.0，hekate_ipl.ini设置略有变更，需要汉化hekate的小伙伴可以根据下面网址找到汉化作者，二选一覆盖nyx.bin到bootloader/sys/后重启生效。更新Goldleaf--v1.1.0，NXThemesInstaller--v2.8.0，更新MissionControl-0.13.1，sys-con--v1.5.2，SaltyNX--v1.2.4，FPSLocker.ovl--v2.1.2和FPSLocker锁帧补丁。更新极限超频EOS-OC-Suite--v1.6.0因和sigpatch存在冲突，所以在02的替换包里补充sys-patch插件用于替代sigpatch。
-
-（1.01）20250509版更新三件套：lsp199308编译的atmosphere-1.9.0-20_support-9dd8269f7-dirty，sigpatch已内置，更新hekate_ctcaer_6.2.5-20.0.0_support_test英文，Lockpick_RCM--v1.9.15。更新Tesla：ovlmenu--v1.2.3（ultrahand--v1.8.3），ovlSysmodules--v1.3.3，Status-Monitor-Overlay--v1.1.8，MissionControl-0.13.0-develop-82e9574（多了hid_patches补丁），SaltyNX--v1.2.2，FPSLocker.ovl--v2.1.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.0-a20384d。更新nro：Checkpoint--v3.10.0，NX-Activity-Log--v1.5.7，nxdumptool--v2.0-05.09.2024，20.0.0系统需要systemPatches主题补丁。
+（1.1）20250530版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，hekate_ctcaer_6.3.1_Nyx_1.7.0，Sigpatches for Atmosphere 1.9.1，更新Tesla-ultrahand--v1.8.5，Status-Monitor-Overlay--v1.1.9+，MissionControl-0.13.2，ldn_mitm--v1.19.1，SaltyNX--v1.2.7，FPSLocker.ovl--v2.1.5和FPSLocker锁帧补丁。更新20.1.0的主题ips补丁，nxdumptool.nro。
 
 # 【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
 
