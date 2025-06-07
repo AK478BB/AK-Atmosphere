@@ -1,6 +1,7 @@
-# AK原版大气层1.9.1个人整合包（2025.05.30）
+# AK原版大气层1.9.1个人整合包（2025.06.07）
 
-（1.1）20250530版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，hekate_ctcaer_6.3.1_Nyx_1.7.0，Sigpatches for Atmosphere 1.9.1，更新Tesla-ultrahand--v1.8.5，Status-Monitor-Overlay--v1.1.9+，MissionControl-0.13.2，ldn_mitm--v1.19.1，SaltyNX--v1.2.7，FPSLocker.ovl--v2.1.5和FPSLocker锁帧补丁。更新20.1.0的主题ips补丁，nxdumptool.nro。
+（1.2）20250607版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，CommonProblemResolver--v0.3.4，更新Tesla-ultrahand--v1.8.9，sys-con--v1.5.3，SaltyNX--v1.3.0pre4，FPSLocker.ovl--v2.2.0pre3和FPSLocker锁帧补丁，更新极限超频EOS-OC-Suite--v1.6.1支持大气层1.9.1。
+（1.1）20250530版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，hekate_ctcaer_6.3.1_Nyx_1.7.0，Sigpatches for Atmosphere 1.9.1，更新Tesla-ultrahand--v1.8.5，Status-Monitor-Overlay--v1.1.9+，MissionControl-0.13.2，ldn_mitm--v1.19.1，SaltyNX--v1.2.7，FPSLocker.ovl--v2.1.5和FPSLocker锁帧补丁。更新20.1.1的主题ips补丁，nxdumptool.nro。
 
 # 【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
 
