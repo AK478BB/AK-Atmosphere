@@ -1,4 +1,6 @@
-# AK原版大气层1.9.1个人整合包（2025.06.15）
+# AK原版大气层1.9.1个人整合包（2025.06.21）
+
+（1.4）20250621版更新NXThemesInstaller--v2.8.1和20.1.5系统需要systemPatches补丁，更新ultrahand--v1.9.5，ovlEdiZon--v1.0.10，SaltyNX--v1.3.0pre6，FPSLocker.ovl--v2.2.0pre5和FPSLocker锁帧补丁，更新EOS-OC-Suite--v1.6.2.2，loader.kip不变。
 
 （1.3）20250615版更新zdm大佬最新atmosphere-1.9.1，在system_settings.ini中加一条参数add_nintendo_blocking_to_dns_hosts = u8!0x0，可以删除atmosphere/hosts/sysmmc.txt和显示真实系统序列号，解决真实（破解）系统联机问题，更新nx-ovlloader--v1.1.1+，ultrahand--v1.9.2，ovlSysmodules--v1.3.4，Status-Monitor-Overlay--v1.1.9+r3，sys-con--v1.5.4，更新FPSLocker锁帧补丁，更新极限超频EOS-OC-Suite--v1.6.2，更新Goldleaf--v1.1.1，Tinfoil--v20.0v1。
 
