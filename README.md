@@ -1,4 +1,6 @@
-# AK原版大气层1.9.1个人整合包（2025.06.21）
+# AK原版大气层1.9.1个人整合包（2025.07.06）
+
+（1.5）20250706版更新Checkpoint--v3.10.1，nxdumptool--v2.0，更新ultrahand--v1.9.9，SaltyNX--v1.3.0pre11，FPSLocker.ovl--v2.2.0pre9和FPSLocker锁帧补丁，更新EOS-OC-Suite--v1.6.3.1。
 
 （1.4）20250621版更新NXThemesInstaller--v2.8.1和20.1.5系统需要systemPatches补丁，更新ultrahand--v1.9.5，ovlEdiZon--v1.0.10，SaltyNX--v1.3.0pre6，FPSLocker.ovl--v2.2.0pre5和FPSLocker锁帧补丁，更新EOS-OC-Suite--v1.6.2.2，loader.kip不变。
 
