@@ -1,14 +1,6 @@
-# AK原版大气层1.9.1个人整合包（2025.07.06）
+# AK原版大气层1.9.2个人整合包（2025.07.19）
 
-（1.5）20250706版更新Checkpoint--v3.10.1，nxdumptool--v2.0，更新ultrahand--v1.9.9，SaltyNX--v1.3.0pre11，FPSLocker.ovl--v2.2.0pre9和FPSLocker锁帧补丁，更新EOS-OC-Suite--v1.6.3.1。
-
-（1.4）20250621版更新NXThemesInstaller--v2.8.1和20.1.5系统需要systemPatches补丁，更新ultrahand--v1.9.5，ovlEdiZon--v1.0.10，SaltyNX--v1.3.0pre6，FPSLocker.ovl--v2.2.0pre5和FPSLocker锁帧补丁，更新EOS-OC-Suite--v1.6.2.2，loader.kip不变。
-
-（1.3）20250615版更新zdm大佬最新atmosphere-1.9.1，在system_settings.ini中加一条参数add_nintendo_blocking_to_dns_hosts = u8!0x0，可以删除atmosphere/hosts/sysmmc.txt和显示真实系统序列号，解决真实（破解）系统联机问题，更新nx-ovlloader--v1.1.1+，ultrahand--v1.9.2，ovlSysmodules--v1.3.4，Status-Monitor-Overlay--v1.1.9+r3，sys-con--v1.5.4，更新FPSLocker锁帧补丁，更新极限超频EOS-OC-Suite--v1.6.2，更新Goldleaf--v1.1.1，Tinfoil--v20.0v1。
-
-（1.2）20250607版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，CommonProblemResolver--v0.3.4，更新Tesla-ultrahand--v1.8.9，sys-con--v1.5.3，SaltyNX--v1.3.0pre4，FPSLocker.ovl--v2.2.0pre3和FPSLocker锁帧补丁，更新极限超频EOS-OC-Suite--v1.6.1支持大气层1.9.1。
-
-（1.1）20250530版更新zdm大佬发布的内置签名补丁的atmosphere-1.9.1-master-with sigpatch，hekate_ctcaer_6.3.1_Nyx_1.7.0，Sigpatches for Atmosphere 1.9.1，更新Tesla-ultrahand--v1.8.5，Status-Monitor-Overlay--v1.1.9+，MissionControl-0.13.2，ldn_mitm--v1.19.1，SaltyNX--v1.2.7，FPSLocker.ovl--v2.1.5和FPSLocker锁帧补丁。更新20.1.1的主题ips补丁，nxdumptool.nro。
+（1.1）20250719版更新zdm大佬最新内置sigpatch的atmosphere-1.9.2，sigpatch支持fusee和fss0的引导，在大气层配置文件system_settings.ini中加系统通知参数段[ns.notification]可解决后台wifi下发送数据导致耗电异常的问题。更新20.2.0的主题ips补丁，更新nx-ovlloader--v1.1.1+，ultrahand--v1.10.0，Status-Monitor-Overlay--v1.1.9+r7ovlSysmodules--v1.3.6，EOS-OC-Suite--v1.6.4，MissionControl-0.13.3，SaltyNX--v1.3.1，FPSLocker.ovl--v2.2.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.2。
 
 # 【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
 
