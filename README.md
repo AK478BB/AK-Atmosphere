@@ -1,6 +1,6 @@
-# AK原版大气层1.9.2个人整合包（2025.07.19）
+# AK原版大气层1.9.3个人整合包（2025.08.03）
 
-（1.1）20250719版更新zdm大佬最新内置sigpatch的atmosphere-1.9.2，sigpatch支持fusee和fss0的引导，在大气层配置文件system_settings.ini中加系统通知参数段[ns.notification]可解决后台wifi下发送数据导致耗电异常的问题。更新20.2.0的主题ips补丁，更新nx-ovlloader--v1.1.1+，ultrahand--v1.10.0，Status-Monitor-Overlay--v1.1.9+r7ovlSysmodules--v1.3.6，EOS-OC-Suite--v1.6.4，MissionControl-0.13.3，SaltyNX--v1.3.1，FPSLocker.ovl--v2.2.1和FPSLocker锁帧补丁，ldn_mitm--v1.19.2。
+（1.1）20250803版更新zdm大佬最新内置sigpatch的atmosphere-1.9.3，最高支持switch20.3.0系统，更新nx-ovlloader--v1.1.1+（不支持SW9.0以下系统），MissionControl-0.13.4，ldn_mitm--v1.19.3，SaltyNX--v1.4.1a，FPSLocker.ovl--v2.3.0和FPSLocker锁帧补丁，极限超频EOS-OC-Suite--v1.6.4的loader.kip不支持大气层1.9.3，只能等更新，如果已经有loader.kip的，此次更新请删除并还原hekate_ipl.ini的修改设置。
 
 # 【AK杂谈】巧用带转区的Tesla系统模块实现国行20.0.1系统救砖
 
